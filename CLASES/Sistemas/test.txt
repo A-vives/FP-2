@@ -42,7 +42,9 @@ mkdir .\aso, .\aso\cartas, .\aso\fotos, .\aso\cartas\enviadas, .\aso\fotos\veran
 ni -Path 
 
 gci | ? ($_.name -like '*a*')
+
 El resultado del gci, se verá filtrado por '?'=where=where-object
+
 donde el nombre empieza por a
 
 CREAR VARIABLES Y ARRAYS y listas

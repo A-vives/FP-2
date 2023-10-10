@@ -12,3 +12,26 @@
 
 6- mostrar las conexiones TCP establecidas
     Get-NetTCPConnection | ? {$_.state -eq 'Established'}
+
+    
+$alumnos=Import-Csv C:\Users\usuario\Desktop\alumnes.csv
+
+foreach ($linea in $alumnos) {
+$num_random= Get-Random -Minimum 0 -Maximum 9
+$nom=$linea.nom
+$ll1=$linea.llinatge1
+$ll2=$linea.llinatge2
+$lengthll2=$linea.llinatge2.Length
+
+$userr=$nom.Substring(0, 1)+$ll1.Substring(0, 2)+$ll2.Substring($lengthll2 -2, 2)+$num_random
+
+write-host $userr
+}
+
+CRodo5
+RNa204
+EArta3
+JLoon6
+ISoon1
+RNado5
+JAlno7
