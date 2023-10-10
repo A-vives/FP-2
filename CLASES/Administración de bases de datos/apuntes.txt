@@ -1,0 +1,26 @@
+sudo find -name sources.list
+
+Get-Help-   Nos proporciona informacion de un cmd-lead sobre su sinaxis y formato
+Get-command-    
+Get-member- 
+get-services- servicios que estan encendidos
+
+get-alias, para ver las abreviaciones que tienen los cmd-leads
+
+Los cmd-leads estan compuestos por un verbo y un nombre
+
+Start-process calc.exe
+    Busca a partir del PATH:
+
+Buscar con get comand el cmd-lead para hacer una copia de un archivo, hay que cambiar el nombre por calc.exe
+    Moveremos el archivo en la ruta por defecto del power shell
+
+Get-Process -name *nombre del proceso* | fl - nos muestra los detalles en columnas
+
+GCI - Get Child item - muestra las propiedades de un archivo
+
+gci tenedor.exe | where {$._name -like 'ca'}
+
+gci -path C:\Windows\System32 | where {$_.Name -like '*ca*' -and $_.Length -gt 50000}
+                                    $_= busca propiedades
+    Busca los archivos que su nombre empieze por ca y que pesen mas de 50000 bits

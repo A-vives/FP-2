@@ -1,0 +1,2 @@
+Fiabilidad, cofidencialidad, integridad
+No Repudio, Autentificacion, Integridad, Cofidencialidad, Disponibilidad

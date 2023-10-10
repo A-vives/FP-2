@@ -1,0 +1,210 @@
+
+
+1. 
+cpi '.\Microsoft Edge.lnk' .\prueba
+cpi 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe' ./prueba
+
+2.
+ren .\msedge.exe calc.exe
+ren cmd.exe calc.exe
+
+3.
+mv .\prueba\calc.exe .\Desktop
+
+new-alias -name "neteja" value "clear-host"
+
+Get-process -name Calculator | fl 
+
+*crear un archivo
+
+New-Item -path .\Desktop\tenedor2
+
+Get-filehash .\Desktop\tenedor2
+
+gci tenedor.txt | select -Property name, Length, LastWriteTime, mode
+
+gci .\tenedor.txt
+
+gci -Path 'C:\Windows\System32' | select -Property *
+
+
+(gci -Path C:\Windows\System32).count
+
+gci -path C:\Windows\System32 | where {$_.Name -like '*ca*' -and $_.Length -lt 50000}
+
+----------Muestra los archivos que empiezan por ca, tienen un peso menos de 50000 y SELECCIONAMOS los atributos de ultimo acceso y el nombre--------------------
+    gci -Path C:\Windows\System32 | where {$_.Name -like '*ca*' -and $_.Length -lt 50000} | select -property LastAccessTime, name
+
+gco
+
+mkdir .\aso, .\aso\cartas, .\aso\fotos, .\aso\cartas\enviadas, .\aso\fotos\verano
+
+ni -Path 
+
+gci | ? ($_.name -like '*a*')
+El resultado del gci, se verá filtrado por '?'=where=where-object
+donde el nombre empieza por a
+
+CREAR VARIABLES Y ARRAYS y listas
+
+$otravar='hola'
+
+Write-Host 'mira que bien' -ForegroundColor red -BackgroundColor White
+
+Write-Host '$otravar' -ForegroundColor red -BackgroundColor White
+
+$varnum='1','2','3'
+
+--------------lista de archivos que empiezan por a------------
+$lista=gci | ? {$_.name -like '*e*'}
+
+------archivos grandes de 200bits----------
+gci | ? {$_.length -gt 200}
+$mas200=gci | ? {$_.length -gt 200}
+
+MANERAS DE HACER FOR EACH
+
+$lista | ForEach-Object {Write-Host $_.LastAccessTimeUtc}
+$mas200 | ForEach {Write-Host $_.LastAccessTimeUtc}
+
+gci | ? ($_.length -gt 200)| % {Write-Host $_.LastAccessTimeUtc} 
+
+$mivector='1','2','3'
+$miVector.Count
+ForEach ($num in $mivector) {Write-host $num}
+    *Este num solo tiene sentido dentro de este foreach*
+
+CONDICIONALES
+$search= gci | ? {$_.length -gt 200}
+foreach ($obj in $search) {
+    if ($search -gt 500) {White-host '$obj' }
+}
+xdkx81
+
+ESTRUCTURAS DE CONTROL
+
+FOREACH= 
+
+foreach ($obj in $mivector) {
+    if ($obj -eq 3) {
+    clear-host
+    write-host -BackgroundColor red -ForegroundColor Yellow 'el numero es: '$obj
+}
+}
+
+IF= 
+
+$var='1'
+switch($var)
+
+
+$peti=Read-Host 'introduce una palabra'
+for ($i=$peti.Length-1;$i -ge 0; $i--) {Write-Host $peti[$i]}
+
+
+$peti=Read-Host 'introduce una palabra'
+$final=''
+for ($i=$peti.Length-1;$i -ge 0; $i--) {
+$final=$final+$peti[$i]
+}
+Write-Host $final
+$var='1'
+Switch($var) {
+1{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 1'
+    }
+2{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 2'
+    }
+3{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 3'
+    }
+4{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 4'
+    }
+5{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 5'
+    }
+6{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 6'
+    }
+7{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 7'
+    }
+8{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 8'
+    }
+9{
+    Write-Host -BackgroundColor Red 'El numero seleccionado es el 9'
+    }
+}
+
+----------------------------CALCULADORA------------------------------------
+Clear-Host
+[int]$op1=
+[int]$op2=
+$operador=Read-Host 'qué operacion deseas hacer? 1-suma 2-resta 3-division 4-multiplicación 0-exit'
+Switch($operador) {
+1{
+    Write-Host -BackgroundColor Red 'suma'
+    [int]$op1=Read-Host 'dime un numero de la operacion'
+    [int]$op2=Read-Host 'dime otro numero de la operacion'
+    [int]$sumres=$op1+$op2
+    Write-Host 'el resultado de la operacion es: ' -BackgroundColor Green $sumres
+    }
+2{
+    Write-Host -BackgroundColor Blue 'resta'
+    [int]$op1=Read-Host 'dime un numero de la operacion'
+    [int]$op2=Read-Host 'dime otro numero de la operacion'
+    [int]$resres=$op1-$op2
+    Write-Host 'el resultado de la operacion es: ' -BackgroundColor Green $resres
+    }
+3{
+    Write-Host -BackgroundColor Yellow 'division'
+    [int]$op1=Read-Host 'dime un numero de la operacion'
+    [int]$op2=Read-Host 'dime otro numero de la operacion'
+    [int]$divres=$op1/$op2
+    Write-Host 'el resultado de la operacion es: ' -BackgroundColor Green $divres
+    }
+4{
+    Write-Host -BackgroundColor Yellow 'multiplicacion'
+    [int]$op1=Read-Host 'dime un numero de la operacion'
+    [int]$op2=Read-Host 'dime otro numero de la operacion'
+    [int]$mulres=$op1*$op2
+    Write-Host 'el resultado de la operacion es: ' -BackgroundColor Green $mulres
+    }
+0{
+    Write-Host -BackgroundColor Red 'EXIT'
+    }
+}
+----------------------------------------------------------------------
+
+pedido
+r=op1+op2
+r=White-host $r
+
+
+for ($i = 0 ; $i -le 100 ; $i++) {
+ if $
+}
+
+conexiones tcp establecidas netstat
+
+--------CONEXIONES TCP ESTABLECIDAS-----------
+Get-NetTCPConnection | ? {$_.state -eq 'Established'}
+
+--------CONEXIONES TCP ESTABLECIDAS PUERTO 443---------
+Get-NetTCPConnection | ? {$_.state -eq 'Established' $_.port -eq '443'}
+
+--------CONEXIONES TCP EN UN ARCHIVO out-file----------
+Get-NetTCPConnection | ? {$_.state -eq 'Established'} | Out-File -FilePath C:\Users\Alejandro\Desktop\salida.txt
+
+--------EXPORTAR A ARCHIVO CSV (campos separados por comas)-----
+gci | Export-csv C:\Users\usuario\Desktop\salida.csv
+
+--------FIXEROS EN VARIABLE-----------------
+Get-NetTCPConnection | ? {$_.State -eq 'established'} | Out-File -FilePath C:\Users\usuario\Desktop\salida.txt
+$mifichero=get-content C:\Users\usuario\Desktop\salida.txt
+$mifichero
+
+--------

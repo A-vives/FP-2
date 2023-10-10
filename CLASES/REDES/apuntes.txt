@@ -1,0 +1,6 @@
+conf apache 2
+
+Keep alive on - off - Permite varias conexiones si-no
+    KeepAliveRequest 100
+
+

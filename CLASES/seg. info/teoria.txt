@@ -1,0 +1,5 @@
+22.04
+
+Seguridad pasiva, medidas tomadas para mitigar los efectos de incidentes ambientales o fisicos
+    Cortes de suministro, robos, incendios, desastres atmosféricos, etc.
+

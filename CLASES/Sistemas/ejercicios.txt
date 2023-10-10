@@ -1,0 +1,14 @@
+1-mostrar todos los directorios
+
+
+2- mostrar los archivos ejecutablesi su ultimo acceso ordenado por el tamaño del archivo descendente
+
+3- Hacer recuento unicamente de los ARCHIVOS de toda la esructura de archivos "c:\windows\system32"
+    "recurse"
+
+4- crea el alias "fulanito" que muestre los procesos del sistema
+
+5_ mostrar los archivos con el atributo "hidden"
+
+6- mostrar las conexiones TCP establecidas
+    Get-NetTCPConnection | ? {$_.state -eq 'Established'}

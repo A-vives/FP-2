@@ -1,0 +1,54 @@
+Start-Process calc.exe
+
+get-alias
+
+cpi - copiar archivos
+
+ren - renombrar archivo
+
+mv - mover item
+
+get-help ni
+
+C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+for-each = %
+where = ?
+
+gci - get child item = ls = dir
+-------------GET - conseguin información-----------
+Get-package - paquetes instalados, programas...
+
+Get-EventLog - muestra el log de eventos
+    Para ver uno en especifico 
+        Get-EventLog -Newest 20 -LogName Security
+
+Get-WinHomeLocation - pais en el que estamos
+
+Get- location - donde estamos
+
+Get-filehash - nos saca el hash del archivo
+
+Get-Service - todos los servicios ya sean activos o no
+
+Get-proces - los procesos que estan corriendo actualmente en el sistema
+
+Get-Culture - Idioma del s.o
+
+Get-SheduledTask - todas las tareas programadas
+
+Get-Random - numero aleatorio 
+    -minimum 1 -maximum 100
+
+Get-Printer - Impresoras configuradas en el s.o
+
+Get-Hotfix - 
+
+Get-Date - devuelve la fecha actual
+
+Stop-Computer -computername "nombre del equipo en la red"
+
+
+------------SET - realizar una acción-----------------
+
+Set-Location c:/ - nos pone en la ruta especificada
