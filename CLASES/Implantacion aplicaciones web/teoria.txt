@@ -1,0 +1,56 @@
+Framework: Conjunto de herramientas que se utilizan en la programacion para desarrollar aplicaiones informáticas
+    Ventajas: 
+    Tu te lo personalizas
+    Nos obliga a tener calidad en el codigo
+    Mayor estabilidad
+
+    Desventajas:
+    Limitaciones: Tienes unas herramientas determinadas, no te puedes crear las propias
+    Dependencia de terceros: Dependen de bibliotecas externas
+
+.NET - framework Microsoft
+    independiente del hardware que usemos
+
+App - Aplicacion de software 
+
+ARPANET- Lo primero antes de www
+
+Diseño responsivo
+
+Escritorio virtual
+
+Fichero log - archivo de registro, la aplicacion escribe los registros de una aplicacion
+
+FtP - File Transfer Protocol
+
+Internet de las cosas (IoT) - 
+
+Internet - Red de ordenadores
+
+RIA (Rich Internet Aplications) - Aplicaciones que tienen la mayoria de ventajas de las aplicaciones pero funcionando dentro de Internet
+
+SOA (Servicio Orientado Arquitectura) - 
+
+SDK (Software Developer Kit) - Conjunto de herramientas que permitan la creacion de aplicaciones o sistemas7
+
+Stackd - Aplicaciones del instalador multi plataforma Bitnami
+
+Bitnami - Empresa española que ofrece paquetes de programa listos para usar para aplicaciones web
+
+WEB 1.0 - Lo que habia lo leias
+
+WEB 2.0 - Se empezaba a colaborar
+    Segunda generacion de paginas WEB
+
+Beb Apps - Aplicaciones web accesibles mediante una interfaz de navegación
+
+Web Social - Conjunto de servicios que permiten interaccion entre seres humanos
+
+Web top - Escritorio virtual accesible desde el navegador
+
+www- Sistema de documentos ede hipertexto enlazados entre si accesibles mediante el navegador
+
+PRIMER NODO DE INTERNET EN UNIVERSIDAD DE CALIFORNIA
+    Al año siguiente se planteaba como iban a ser los gmails
+    Tim Berners Lee en el 1989 Inventó el HTML
+        La primara pagina web  info.cern.ch

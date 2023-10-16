@@ -1,0 +1,7 @@
+Conocer diferentes conceptos relacionados con la web
+Aprende que es la web i como ha evolucionat
+Conocer los distintos tipos de arquitecturas
+Aprende instalaciones de servidores web
+Conocer la forma de instalacion de servidores de bases de datos
+Clasificar i dominar las diferencias entre aplicaciones de escritorio y web
+Conocer las tendencias del mundo web

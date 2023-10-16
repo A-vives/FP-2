@@ -25,7 +25,7 @@ $lengthll2=$linea.llinatge2.Length
 
 $userr=$nom.Substring(0, 1)+$ll1.Substring(0, 2)+$ll2.Substring($lengthll2 -2, 2)+$num_random
 
-write-host $userr
+$userr > ruta de archivo
 }
 
 CRodo5
@@ -35,3 +35,31 @@ JLoon6
 ISoon1
 RNado5
 JAlno7
+
+
+Pedir cadena de 9 numeros
+comprobar i que cuente > 5 (mayores)
+mostrar la posicion
+comprobar que no sean mas de 9 numeros
+    Si hay mas que salga mensage y salga del script
+
+
+
+$cad=read-host ' 9 digitos:'
+
+if ($cad.Length -gt 9 -or $cad.Length -le 0)
+{
+Write-Host 'hay mas de 9 digitos'
+break
+}
+else
+{
+for ($i=0;$i -lt $cad.Length;$i++)
+{
+    if ($cad.Substring($i,1) -ge 5)
+    {
+    write-host 'is more than 5: '$cad[$i] 'en la posicion:' $($i+1)
+    }
+
+}
+}

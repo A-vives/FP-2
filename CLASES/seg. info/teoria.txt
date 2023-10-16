@@ -3,3 +3,19 @@
 Seguridad pasiva, medidas tomadas para mitigar los efectos de incidentes ambientales o fisicos
     Cortes de suministro, robos, incendios, desastres atmosféricos, etc.
 
+SEGURIDAD pasiva
+
+Control y medidas que impidan acceso y modificaciones no autorizadas a datos y aplicaciones
+
+Conlleva 2 procesos
+    Identificación: usuario se da a conocer en el sistema
+    Autentificacion: Verificar que es esa persona
+
+Varios niveles
+    Bios y gestor de arranque
+    Sistema operativo y/o servidor de autentificacion (LDAP-Active directory)
+
+Establecemos contraseña a Bios
+Evitar edicion del arranque
+Asegurar fisicamente el equipo
+Cifrar el disco

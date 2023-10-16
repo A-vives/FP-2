@@ -209,4 +209,71 @@ Get-NetTCPConnection | ? {$_.State -eq 'established'} | Out-File -FilePath C:\Us
 $mifichero=get-content C:\Users\usuario\Desktop\salida.txt
 $mifichero
 
---------
+--------SACA LA INICIAL DEL NOMBRE, 2 PRIMERAS LETRAS DEL PRIMER APELLIDO
+2 ULTIMAS LETRAS DEL SEGUNDO APELLIDO-----------------------
+
+$alumnos=Import-Csv C:\Users\usuario\Desktop\alumnes.csv
+
+foreach ($linea in $alumnos) {
+#genera numero random entre 0 y 9 y la gusrda en una variable
+$num_random= Get-Random -Minimum 0 -Maximum 9
+
+#sacamos la primera letra del campo "nombre" y la guardamos en una variable
+$nom=$linea.nom.Substring(0, 1)
+
+#sacamos las 2 primeras letras del primer apellido y la guardamos en una variable
+$ll1=$linea.llinatge1.Substring(0, 2)
+
+#(personal) mido el segundo apellido para restarle al indice, asi puedo coger las 2 ultimas del apellido
+#(son las primeras, hacer igual que el 1er apellido)
+$lengthll2=$linea.llinatge2.Length
+$ll2=$linea.llinatge2.Substring($lengthll2 -2, 2)
+
+#Juntamos todas las variables en una mediante la concatenación
+$userr=$nom+$ll1+$ll2+$num_random
+
+write-host $userr
+}
+
+$alumnos=Import-Csv C:\Users\usuario\Desktop\alumnes.csv
+
+foreach ($linea in $alumnos) {
+$num_random= Get-Random -Minimum 0 -Maximum 9
+$nom=$linea.nom
+$ll1=$linea.llinatge1
+$ll2=$linea.llinatge2
+$lengthll2=$linea.llinatge2.Length
+
+$userr=$nom.Substring(0, 1)+$ll1.Substring(0, 2)+$ll2.Substring($lengthll2 -2, 2)+$num_random
+
+$userr > ruta de archivo.txt
+}
+-----------------CREAR USUARIOS-------------
+
+PIDES UN DNI 9 posiciones 1 letra
+
+
+-----------Cadena de 9 digitos-------------------------
+
+$cad=read-host ' 9 digitos:'
+[int]$contador=0
+if ($cad.Length -gt 9 -or $cad.Length -le 0)
+{
+Write-Host 'hay mas de 9 digitos'
+break
+}
+else
+{
+for ($i=0;$i -lt $cad.Length;$i++){
+$num=$cad.Substring($i,1)
+
+    if ($num -ge 5)
+    {
+    write-host 'is more than 5: '$cad[$i] 'en la posicion:' $($i+1)
+    $contador++
+    }
+
+}
+}
+Write-Host 'se han encontrado ' $contador 'numeros mayores o iguales que 5'
+
