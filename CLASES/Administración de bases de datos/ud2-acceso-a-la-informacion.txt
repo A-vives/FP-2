@@ -1,0 +1,84 @@
+---------------------GESTION DE USUARIOS
+    Podemos crear usuarios en cualquier base de datos
+        CREATE USER nom 
+        alter user nom reset -parametro
+
+---------------------Autorizaciones y grupos
+    se puede gestionar los privilegios a 
+        usuarios
+        roles
+            SELECT nombre_del_rol
+            CREATE ROLE nom_del_rol;
+            DROP ROLE nom_del_rol;
+
+            SET ROLE joan;
+            SET ROLE NONE;
+            RESET NONE
+            Nosotros creamos el rol y le damos los privilegios
+            Consultar los roles
+
+            atributos
+                LOGIN- Si lo tiene se considera un cliente de la base de datos "puede conectar con la base de datos"
+        grupos
+            Administrador de sistema: Estos usuarios tienen acceso a todas las bases de datos
+            Admin dba : Tiene acceso a todos los recursos de una base de datos
+                    puede modificar a placer la base de datos
+            Admin de seguridad: 
+            Operaciones de control: Permite realizar copias de seguridad o restauraciones del sistema
+
+
+---------------------Privileguios y permisos
+
+Cuando se crea un objeto este se asigna a un propietario, normalmente el mismo usuario
+para que otros usuarios puedan hacer algo con ese objeto es necesario otorgarle ciertos privilegios
+
+SELECT  INSERT      UPDATE      DELETE  RULE    REFERENCES  TRIGGER
+CREATE  TEMPORARY   EXECUTE     USAGE
+
+Estos se pueden dar sobre distintos recursos del gestor de base de datos
+Los mas comunes:
+    #Conexion a base de datos
+    #Tablas: Quien puede acceder a ellas y modificarlos
+    #Sistema: Quien puede efectuar acciones de sistema en el SGBD
+    #Programa: quien puede crear, modificar y usar programas de la base de datos
+    #Programas almacenados: Quien puede ejecutar funciones y procedimientos específicos.
+    
+Sobre bases de datos, en postgresql existen 3 tipos de privilegios sobre bases de datos:
+    CONNECT: Permite al usuario conectarse a la base de datos especificada.
+    CREATE: Permite crear nuevos esquemas en la base de datos
+    TEMPORAL: Permite cerar tablas temporales durante el uso de la base de datos
+
+------------CREATE ROLE------------
+
+
+    
+-------------CREATE/ALTER ROLE------------
+CREATE ROLE <nombre_rol> WITH <opciones>
+    -SUPERUSER/NOSUPERUSER. Super usuario, privilegios para crear bases de datos y usuarios.
+    -CREATEDB/NOCREATEDB. Permite crear bases de datos.
+    -CREATEROLE/NOCREATEROLE. Permite crear roles.
+    -CREATEUSER/NOCREATEUSER. Permite crear usuarios.
+    -LOGIN/NOLOGIN. Este atributo hace la diferencia entre un rol y usuario. Ya que el usuario tiene permisos para acceder a la base de datos a traves de un cliente.
+    -INHERT/NOINHERT. Determina si hereda los permisos del grupo al que pertenece.
+    -CONNECTION LIMIT <con_limit>
+    -ENCRYPTED/NOENCRYPTED PASSWORD <passwd>/PASSWORD NULL
+    -VALID UNTIL <date>
+    -IN ROLE <nombre _rol>
+    -ROLE <nombre _rol>
+    -ADMIN <nombre _rol>
+
+ALTER ROLE <nombre_rol> WITH <opciones>
+
+    -SUPERUSER/NOSUPERUSER. Super usuario, privilegios para crear bases de datos y usuarios.
+    -CREATEDB/NOCREATEDB. Permite crear bases de datos.
+    -CREATEROLE/NOCREATEROLE. Permite crear roles.
+    -CREATEUSER/NOCREATEUSER. Permite crear usuarios.
+    -LOGIN/NOLOGIN. Este atributo hace la diferencia entre un rol y usuario. Ya que el usuario tiene permisos para acceder a la base de datos a traves de un cliente.
+    -PASSWORD. Permite alterar la contraseña.
+    -VALID UNTIL. Expiración de usuarios.
+    
+
+---------comorobar contraseñas cifradas ----------
+    
+    SELECT * FROM pg_user;
+select  * from pg_user where password = md5("cadena");

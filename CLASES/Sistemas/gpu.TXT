@@ -1,0 +1,30 @@
+---------Nombre GPUs instaladas-----------
+    Si se quita en .name salen todos los datos de las mismas
+$gpu = (Get-WmiObject Win32_VideoController).Name
+
+---------USO DE GPU ------------------
+
+
+
+# Example to get GPU usage counters for a specific process:
+$p = Get-Process dwm
+((Get-Counter "\GPU Process Memory(pid_$($p.id)*)\Local Usage").CounterSamples | where CookedValue).CookedValue | 
+    foreach {Write-Output "Process $($P.Name) GPU Process Memory $([math]::Round($_/1MB,2)) MB"}
+((Get-Counter "\GPU Engine(pid_$($p.id)*engtype_3D)\Utilization Percentage").CounterSamples | where CookedValue).CookedValue |
+    foreach {Write-Output "Process $($P.Name) GPU Engine Usage $([math]::Round($_,2))%"}
+
+# Outputs:
+Process dwm GPU Process Memory 259.36 MB
+Process dwm GPU Engine Usage 0.47%
+
+
+# Example to get total GPU usage counters:
+$GpuMemTotal = (((Get-Counter "\GPU Process Memory(*)\Local Usage").CounterSamples | where CookedValue).CookedValue | measure -sum).sum
+    Write-Output "Total GPU Process Memory Local Usage: $([math]::Round($GpuMemTotal/1MB,2)) MB"
+$GpuUseTotal = (((Get-Counter "\GPU Engine(*engtype_3D)\Utilization Percentage").CounterSamples | where CookedValue).CookedValue | measure -sum).sum
+    Write-Output "Total GPU Engine Usage: $([math]::Round($GpuUseTotal,2))%"
+
+# Outputs:
+Total GPU Process Memory Local Usage: 511.36 MB
+Total GPU Engine Usage: 0.77%
+

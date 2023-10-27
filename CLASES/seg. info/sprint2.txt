@@ -1,0 +1,17 @@
+Este sprint trata de copias de seguridad
+
+El objetivo es hacer una copia de seguridad del servidor apache
+Herramienta potente:
+VEAM BACKUP - Licencia comunity Edition - se usa mucho y tiene una curva de aprendizaje Aplications
+Usaremos duplicati 
+    -Funciona con protoxocolos estandar como FTP, SSH, WebDAV
+
+COPIA 1
+    Copia cifrada con origen en la carpeta Documentos como destino la cuenta del drive del instituto
+    Perdida de datos de 1h de tiempo de lunes a viernes
+    Hay que comprobar la recuperación
+COPIA 2
+    Sin cifrar de la carpeta Imagenes
+    Perdida de datos 24h de lunes a domingo
+    
+

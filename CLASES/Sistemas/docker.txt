@@ -1,0 +1,62 @@
+-------COMANDOS DOCKER---------
+
+DOCKER IMAGE ls - Imagenes que tenemos descargadas
+DOCKER PULL<nombre_imagen> - descargar imagenes
+DOCKER SEARCH ubuntu
+    "   "       ubuntu:last - ver ultima version de esa imagen
+    "   "       inspect - vista de la
+
+----run-----
+sudo docker run -it ubuntu /bin/bash - ejecutar container ubuntu con shell /bin/bash
+                -d - no es iterativo, se ejecuta pero no podemos interactiar con el 
+                -p 9090<local>:80<puerto_container> <nombre_imagen/id_imagen>
+------------
+sudo docker run -it -p 9090:80 vivesapache2
+sudo docker commit <id_container> <id_cont_guardado>
+----EXEC----
+sudo docher exec <nombre_imagen/id_imagen> <comando_ejecutar>
+                                            systemctl start apache2
+
+------------
+sudo docker kill | sudo docker stop id_container - parar container docker
+sudo docker container ls/ps - nos muestra los contenedores activos
+docker rm ID/NOM - eliminar container
+
+--------dentro del container---------
+apt update
+apt upgrade
+apt net-tools
+docker rm ID/NOM 
+    Una vez dentro tendremos el sistema operativo limpio
+Servicio de virtualización en la nube
+    Nos permite ejecutar una aplicacion de escritorio en la nube.
+    Cuando carga una aplicacion dandole los requisotos de hardware y software necesarias 
+    para ejecutar la misma.
+imagen: Congunto de configuraciones necesarias de un sistema operativo para lanzarlo en docker
+Multiplataforma
+Menor consumo de RECURSOS
+Arranca en segundos
+
+Estos solo utilizan lo necesario para 
+El docker engine nos per ite
+
+Ventajasauto gestion de los contenedores
+Fiabilidad
+Aplicaciones libres y sin necesidad de instalar dependencias
+swaplegar multitud de contenedores en el mismo equipo físico
+Este contenedor se ha convertido en una herramienta para que los desarrolladores
+y los administradores puedan trabajar como el entorno de procduccion
+reduciondo asi el tiempo y maquinaria
+
+----docker COMANDOS-----
+No hay docker sin Imagen
+
+sudo docker image ls - nos muestra todas las imagenes 
+    IMAGE ID - ÚNICO - El mismo container tiene su propio ID
+    
+    docher run ubuntu -it /bin/bash
+ -it -modo interactivo
+ /bin/bash - aplicacion que se va a ejecutar
+
+-------SCRIPT--------
+909$count:80

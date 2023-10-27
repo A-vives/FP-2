@@ -1,0 +1,59 @@
+/var/log/apache2
+C:\Archivos de programa\Apache Software Foundation\Apache2.2\logs
+
+como funciona
+    El cliente hace una peticion a la ip publica del router
+        Hay que configurar las tablas DNS propias para engañar al equipo y poder hacerlo en locas
+
+---------------RUTAS
+windows ruta DNS
+    system32\drivers\etc\hosts
+
+    RUTAS DE WEB
+        /var/www/domini1/index.html
+        /var/www/domini2/benvinguts.html
+    DOMINIOS
+        /etc/apache2/sites_avaible/000-default.conf
+        /etc/apache2/sites_avaible/001-SX1.conf
+        /etc/apache2/sites_avaible/002-ASIX.conf
+
+Configuracion apache
+
+----------------COMANDOS
+sudo service apache2 status - start - stop - restart
+sudo A2ENAA2ENSITE 001-default.conf
+---ACTIVAR DOMINIOS
+    A2ENSITE 001-SX1
+    A2ENSITE 002-ASIX
+---Desactivar default
+    A2DISSITE 000-default.conf
+    A2DISSITE 001-default.conf
+        ServerName www.asix2-sxi.comas
+        Serveradmin ale@localhost
+        DocumentRoot /var/www/domini1/
+    
+    A2DISSITE 002-default.conf
+        ServerName www.asix.com
+        Serveradmin ale@localhost
+        DocumentRoot /var/www/domini1/
+
+    /etc/apache2/sites-avaibles se hacen cambios aqui
+
+-------DIRECTIVAS------
+Normas de ese directorio en concreto:
+Estas se guardan directamente en el .conf de cada dominio
+001-default.conf - 002-default.conf
+<Directory /var/www/html>
+# ... escribir las directivas aquí ...
+</Directory>
+
+Para hacer una carpeta compartida en 2 dominios seria asi:
+
+Alias /fotos "/home/usuario/mis_fotos"
+El alias es lo que sale an la url
+
+<Directory "/home/usuario/mis_fotos">
+Require all granted
+</Directory>
+Ganamos acceso a la carpeta /home/usuario/mis_fotos
+

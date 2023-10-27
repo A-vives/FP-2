@@ -1,0 +1,89 @@
+GPU
+
+$gpu = (Get-WmiObject Win32_VideoController).Name
+
+
+# Declaramos la función que va a realizar las comprobaciones
+function CompruebaDNI {
+    # Si no cumple con el regex especificado, devuelve un fallo por formato incorrecto. Los DNIs tienen 8 dígitos y una letra al final. El primer dígito también puede ser una X, Y o Z en lugar de un número.
+    if ($DNI -notmatch "^[0-9XYZ]{1}[0-9]{7}[a-zA-Z]{1}$") { 
+        # Se escribe un mensaje de advertencia si el formato no es válido.
+        Write-Warning "El DNI introducido '$DNI' no tiene el formato correcto."
+        # Y establecemos una variable con el estado de error. Es global para poder acceder a ella desde fuera de la función.
+        $global:DNIFormato = "KO"
+    }
+    else {
+        # Si el formato es correcto establecemos la variable como OK.
+         $global:DNIFormato = "OK"
+    }
+     
+    # Ya dado por bueno el formato, comprobamos que la letra cumpla con las normas establecidas.
+    if ($global:DNIFormato -eq "OK") {
+        
+        # Cogemos la letra, que es el último dígito del string.
+        $DNILetra = $DNI.Substring($DNI.length - 1)
+        
+        # Si el primer carácter es una X, Y o Z la convertimos en un '0'.
+        $DNInumeros= $DNI -replace ("X","0") -replace ("Y","1") -replace ("X","2") 
+        
+        # Ahora que todo son números cogemos los 8 primeros para hacer el cálculo.
+        $DNInumeros= $DNInumeros.Substring(0,8)
+        
+        # Se calcula el resto de dividirlo entre 23.
+        $DNIresto= $DNInumeros%23
+        # Según el valor del resto establecemos cual es la letra para ese número de DNI.
+        if ($DNIresto -eq 0) {$LetraDNI = "T"}
+        if ($DNIresto -eq 1) {$LetraDNI = "R"}
+        if ($DNIresto -eq 2) {$LetraDNI = "W"}
+        if ($DNIresto -eq 3) {$LetraDNI = "A"}
+        if ($DNIresto -eq 4) {$LetraDNI = "G"}
+        if ($DNIresto -eq 5) {$LetraDNI = "M"}
+        if ($DNIresto -eq 6) {$LetraDNI = "Y"}
+        if ($DNIresto -eq 7) {$LetraDNI = "F"}
+        if ($DNIresto -eq 8) {$LetraDNI = "P"}
+        if ($DNIresto -eq 9) {$LetraDNI = "D"}
+        if ($DNIresto -eq 10) {$LetraDNI = "X"}
+        if ($DNIresto -eq 11) {$LetraDNI = "B"}
+        if ($DNIresto -eq 12) {$LetraDNI = "N"}
+        if ($DNIresto -eq 13) {$LetraDNI = "J"}
+        if ($DNIresto -eq 14) {$LetraDNI = "Z"}
+        if ($DNIresto -eq 15) {$LetraDNI = "S"}
+        if ($DNIresto -eq 16) {$LetraDNI = "Q"}
+        if ($DNIresto -eq 17) {$LetraDNI = "V"}
+        if ($DNIresto -eq 18) {$LetraDNI = "H"}
+        if ($DNIresto -eq 19) {$LetraDNI = "L"}
+        if ($DNIresto -eq 20) {$LetraDNI = "C"}
+        if ($DNIresto -eq 21) {$LetraDNI = "K"}
+        if ($DNIresto -eq 22) {$LetraDNI = "E"}
+        
+        # Si la letra que hemos indicado coincide con la que se ha calculado, entonces lo damos por bueno.
+        if ($DNILetra -eq $LetraDNI) {
+            $global:DNILetraCheck = "OK"
+        } 
+        # De lo contrario lo damos por incorrecto y devolvemos un mensaje de aviso.
+        else {
+            $global:DNILetraCheck = "KO"
+            Write-Warning "ERROR: La letra del DNI no es correcta, debería de ser $LetraDNI." 
+        }
+    }
+}
+ 
+# Ya fuera de la función empieza el script, pidiendo al usuario que introduzca un DNI.
+$DNI = Read-Host "Introduce el DNI"
+ 
+# Llamamos a la función para comprobarlo.
+CompruebaDNI   
+# Si el formato o la letra son incorrectas, volvemos a pedirlo.
+if ($DNIFormato -eq "KO" -or $global:DNILetraCheck -eq "KO") {
+    # Y lo seguimos pidiendo indefinidamente hasta que sea correcto.
+     do { 
+        $DNI = Read-Host "Introduce un DNI válido para este usuario"
+        CompruebaDNI
+    } until (($DNIFormato -eq "OK") -and ($DNILetraCheck -eq "OK"))
+}
+# Y ya cuando es correcto devolvemos un mensaje indicando que es válido y termina el script.
+Write-Host "DNI '$DNI' válido!!" -ForegroundColor "Green"
+
+#############
+#### FIN #### 
+#############

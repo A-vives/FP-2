@@ -52,3 +52,21 @@ Stop-Computer -computername "nombre del equipo en la red"
 ------------SET - realizar una acción-----------------
 
 Set-Location c:/ - nos pone en la ruta especificada
+
+-----------cHEQUEAR Win32_VideoController------------
+
+$gpu = (Get-WmiObject Win32_VideoController).Name
+
+-----------ARRAY-------------
+
+$miarray=@('a','b','c')
+$miarray.count  =3
+        .length =3
+        [0] - [0..1]*rango*  posicion
+        +='hola' - declaracion en memoria
+
+ si ese valor esta en esa array
+                -in
+if ($numeros -contains '7') {
+    write-host 'hola'
+}

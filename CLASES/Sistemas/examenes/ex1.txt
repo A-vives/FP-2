@@ -1,0 +1,8 @@
+Sabiendo que 2 archivos duplicados NO son aquellos que tienen el 
+mismo nombre tamaño i extensió
+
+comprobar si hay archivos duplicados en tu escritorio y el home
+
+1.mostrar el numero de archivos duplicados en tu home
+
+2.muestra el elemento que ideentifica los archivos duplicados en tu home

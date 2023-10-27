@@ -19,3 +19,87 @@ Establecemos contraseña a Bios
 Evitar edicion del arranque
 Asegurar fisicamente el equipo
 Cifrar el disco
+
+
+---------MALWARE---------
+EXAMEN
+
+AMENAZA: Situacion de daño cuyo riesgo de producirse es significativo
+
+VULNERABILIDAD: Deficiencia de seguridad susceptible de que se haga daño (punto débil)
+
+EXPLOIT: Tecnica que permite aprobechar la vulnerabilidad, en este caso es 
+posible que tenga acceso al sistema.
+
+BUG: Resultado de un fallo de programacion al crear los programas de ordenadores
+
+PAYLOAD: Parte de codigo de un exploit que tiene como objetivo ejecutar una accion maliciosa
+
+Como se clasifican estas vulnerabilidades?
+    Numeradas - CVE-2000-0098
+
+**CLASICA**
+VIRUS
+GUSANOS
+TROYANOS
+LADRONES DE INFORMACION
+Codigo delictivo
+Greyware Accion molesta o no deseable-Sdware, spyware, bromas, bulos
+
+-----RAMSONWARE----- | https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ransomware.pdf
+https://www.nomoreransom.org/es/index.html
+
+PROCEDIMIENTO ANTE UN ATAQUE DE RAMSONWARE
+
+Aislar el equipo - apagarlo y sacarlo de la red
+
+Clonar el equipo- El original es para el equipo forense
+
+Desinfectar
+
+Intentar recuperar
+
+Restaurar
+
+Cambiar las contraseñas
+
+----Como evitar esto?-------
+Ellos llegan explotando una vulnerabilidad, estos se aprobechan de sistemas sin actualizar
+
+Configuracion inadecuada, configuraciones por defecto sol: hardening de servicios
+
+Ingenieria social: El ser humano, el eslavon mas débil sol: mantener la informacion debidamente custodiada
+y concioenciar a los usuarios de los peligros existentes
+
+Por un archivo malicioso
+
+-------RECOMENDACIONES DE SEGURIDAD--------
+Mantenerse informado sobre las novedades y alertas de seguridad.
+Accede a servicios de internet que ofrezcan seguridad (HTTPS)
+Mantener actualizadotu equipo y software
+SOFTWARE LEGAL
+Crear diferentes usuarios con permisos minimos
+Utilizar herramientas de seguridad actualizadas periodicamente
+
+-------SOLUCIONES----------
+A nivel usuario ANTIVIRUS 
+
+ANTIVIRUS
+https://www.incibe.es/empresas/blog/hace-antivirus-detectar-el-malware?authuser=1
+
+Tiene una base de datos de firmas
+llega un archivo y se analiza - le aplican un hash, ese hash se comparan 
+
+SIEM -Herramienta que recoge grandes cantidades de informacion, es un agente que se instala en el servidor
+    de la empresa para poder recoger l
+        Toda la informacion que llega hacemos algo o no
+
+EDR - Ademas de detectar responder ante ataques, como un SIEM con esteroides
+        Si detecta algun ataque es capaz de aislar los equipos afectados
+
+XEDR - Estos llegan hasta cualquier punto, routers, switch..
+
+SOAR - Organización, automatización y respuesta de la seguridad:
+    Suelen implementar en colaboración con el (SOC)centro de operaciones de seguridad
+
+

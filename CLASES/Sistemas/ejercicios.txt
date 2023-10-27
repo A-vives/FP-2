@@ -1,65 +1,36 @@
-1-mostrar todos los directorios
+1. Mostra els arxius que tenguin un tamany entre 1KB i 4KB, i que el seu nom o extensió
+contengui el caràcter x. El resultat a d’estat ordenat per tamany de manera descendent:
+gci | where {$_.length -ge 1000 -and $_.length -le 4000 -and $_.name -like “*x*”} | sort -
+descending -property length
 
+2. Amb la mateixa cerca anterior, ordena ara per la data del darrer accés als arxius (no
+confondre amb la data d’escriptura):
+gci | where {$_.length -ge 1000 -and $_.length -le 4000 -and $_.name -like “*x*”} | sort -
+property LastAccessTime
 
-2- mostrar los archivos ejecutablesi su ultimo acceso ordenado por el tamaño del archivo descendente
+3. Mostra la ip i el temps de vida de la ip assignada per dhcp.
+Get-NetIpAddress | select IpAddress,PrefixOrigin,ValidLifeTime | where {$_.PrefixOrigin -
+eq “Dhcp} | select IpAddress,ValidLifeTime
 
-3- Hacer recuento unicamente de los ARCHIVOS de toda la esructura de archivos "c:\windows\system32"
-    "recurse"
+4. Mostra els processos ordenats per nom i temps que porten en execució.
+Get-Process | sort -property Name,TotalProcessorTime
 
-4- crea el alias "fulanito" que muestre los procesos del sistema
+5. Inicia la calculadora:
+Start-Process calc
 
-5_ mostrar los archivos con el atributo "hidden"
+6. Mostra la data i hora en que es va iniciar la calculadora:
+get-process calculator | select -property StartTime
 
-6- mostrar las conexiones TCP establecidas
-    Get-NetTCPConnection | ? {$_.state -eq 'Established'}
+7. Mata el proces de la calculadora:
+get-process calculator | stop-process
 
-    
-$alumnos=Import-Csv C:\Users\usuario\Desktop\alumnes.csv
+8. Mostra la següent sortida dels usuaris locals:
+Get-LocalUser | select @{name=”[NOM USUARI]”;expression={$_.Name}},
+@{name=”[ACTIU]”;expression={$_.enabled}},
+@{name=”[DARRER LOGIN]”;expression={$_.LastLogon}}
 
-foreach ($linea in $alumnos) {
-$num_random= Get-Random -Minimum 0 -Maximum 9
-$nom=$linea.nom
-$ll1=$linea.llinatge1
-$ll2=$linea.llinatge2
-$lengthll2=$linea.llinatge2.Length
+9. Renombra un usuari local:
+Rename-Localuser NomUsuari NouNomUsuari
 
-$userr=$nom.Substring(0, 1)+$ll1.Substring(0, 2)+$ll2.Substring($lengthll2 -2, 2)+$num_random
-
-$userr > ruta de archivo
-}
-
-CRodo5
-RNa204
-EArta3
-JLoon6
-ISoon1
-RNado5
-JAlno7
-
-
-Pedir cadena de 9 numeros
-comprobar i que cuente > 5 (mayores)
-mostrar la posicion
-comprobar que no sean mas de 9 numeros
-    Si hay mas que salga mensage y salga del script
-
-
-
-$cad=read-host ' 9 digitos:'
-
-if ($cad.Length -gt 9 -or $cad.Length -le 0)
-{
-Write-Host 'hay mas de 9 digitos'
-break
-}
-else
-{
-for ($i=0;$i -lt $cad.Length;$i++)
-{
-    if ($cad.Substring($i,1) -ge 5)
-    {
-    write-host 'is more than 5: '$cad[$i] 'en la posicion:' $($i+1)
-    }
-
-}
-}
+10. Desactiva l’usuari anterior.
+Disable-Localuser NomUsuari

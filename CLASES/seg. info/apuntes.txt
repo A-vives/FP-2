@@ -1,2 +1,67 @@
 Fiabilidad, cofidencialidad, integridad
 No Repudio, Autentificacion, Integridad, Cofidencialidad, Disponibilidad
+
+CRIPTOGRAFIA
+
+El texto plano es inseguro tenemos que encriptarlo
+
+hay 2 tecnicas mas sencillas de cifrado clasicas
+    sustitución - cambio de elementos
+    Trasposición - reordenacion de los mismos
+
+modernas:
+    Cifrado en bloque: dividen el texto origen de un tamaño fijo y lo cifran de manera independiente
+    Cifrado de flujo: Se realiza byte a byte o caracter a caracter
+
+----GRANDES GRUPOS----
+    Simetricos o de clave simetrica o privada: unica clave de cifrado cono descifrado
+    Asimétricos o clave asimetrica o pública: Una clave para cifrar mensages y una distinta
+        para descifrarlos, estos forman parte de los actualizaciones
+
+---cifrado Simetrico: 
+    es mas rapido
+    para conseguir el  cifrado, se tiene que intercambiar, lo cual es peligroso
+
+-Cada parte ha de tener una pareja de claves
+    Clave privada: Custodiada por el propietario y no se dará a conocer 
+    Calve pública: Conocida por todos los USUARIOS
+Lo que cifra una lo puede descifrar la otra
+Se basan en resumen o bash en un sentido
+    Computacion fácil pero inversion extremadamente dificil
+MD5(inseguro) SHA (la más utilizada)
+    En el fichero shadow se encuentra
+
+---cifrado asimetrico
+    Son diferentes las claves, es mas seguro 
+    No hace falta negocioación
+
+-enviar clave privada encriptada de manera segura
+    Ciframos simetrito la informacion de daniel
+        problema- esa clave la tenemos que hacer segura
+    ciframos de nuevo asimetrico toda esa información
+
+FIRMA DIGITAL
+    Cuando usamos la criptografia asimetrica, deciamos que cifrabamos la info en 1 sentido
+    que pasa en el sentido contrario
+    si la cifro con la privada quien la descifra? quien tenga la clave publica
+        Esto será en texto plano
+    Lo que ha pasado esque
+        Si tendo una info en claro 
+            Aplica un hash y obtiene un id unico
+            cifra esa informacion con la clave privada del dueño del documentos
+            Tenemos el hash del documento cifrado con clave privada del cliente - firma digital
+            y el certificado
+
+            Lo descifra con la clave publica del cliente descifra el hash
+            y se obtiene el hash 
+            y a los datos obtenidos le saca un hash para comprobarlo
+
+el cliente le manda solicitud al servidor
+nos devuelve clave publica 
+El cliente genera clave privada* la ciframos con clave publica
+el servidor descifra con la privada del servidor
+Le devuelve 
+
+
+cerfificados
+    

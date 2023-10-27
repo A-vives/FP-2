@@ -54,3 +54,171 @@ PRIMER NODO DE INTERNET EN UNIVERSIDAD DE CALIFORNIA
     Al año siguiente se planteaba como iban a ser los gmails
     Tim Berners Lee en el 1989 Inventó el HTML
         La primara pagina web  info.cern.ch
+
+---------ELEMENTOS DE LA ARQUITECTURA CLIENTE/SERVIDOR-----------
+
+    El cliente le hace una peticion a un servidor y este responde
+
+Ajax: Tecnologia que desarroyan web que permiten optimizar las aplicaciones
+Cloud-computing.Núvol. Servicios accesibles mediante Internet
+Datacenter: Centro de procesamiento de datos
+Edge Computing: Arquitectura distribuida para realizar el procesamiento de la informacion fisica y datos del CLIENTE
+Flash: Tecnologia independiente del navegador que permiten crear elementos animados.
+MOOC(massive open online course): Cursos masivos y abiertos que se pueden realizar mediante internet.
+Saas, PaaS, IaaS (Software, plataform i Infrastructure as a service): 
+    -Saas: Filosofia de no vender programas, alquilar programas
+si pagas el alquiler de un programa ahora es una web que si no pagas se corta el servicio desde el SERVIDOR
+    -PaaS: Alquiler de un sistema operativo.
+Streaming: Servicio de descarga de archivos, soluciona y gestiona problemas de descarga de archivos masivos
+WebOS: Servicio de nube que oferta la posibilidad de virtualizar de manera remota direfentes sistemas operativos
+
+COBOL - Lenguaje de programacion dedicada a la banca y transacciones bancarias
+
+Las nuevas apps que se crean:
+    Posibilidad de realizar trabajos colaborativos
+        punto multi-punto:estrella
+    Herramientas multiplataforma
+    Herramientas ofimáticas
+
+--VENTAJAS:
+    
+    ESCALABILIDAD: Si nos quedamos sin potencia de computo podemos mejorar los sistemas para recibir mas
+        peticiones.
+
+    DISPONIBILIDAD:
+
+    CONTROL CENTRALIZADO:
+
+--DESVENTAJAS:
+    POSIBLE CONGESTION DEL TRAFICO:
+
+    NECESIDAD DE POTENTES RECURSOS AL SERVIDOR: Es muy costoso y hay mucha investigación 
+
+    MANTENIMIENTO COMPLEJO: 
+
+----2 niveles - punto multipunto:
+servidor espera la solicitud 
+busca dentro de sus alrchivos, la solicitud que ha solicitado el cliente
+
+Este sistema puede generar bastantes congestiones dentro de la red
+La arquitectura de 3 niveles intenta evitar la sobrecarga equilibrando las tareas que tienen que soportar
+los servidores
+
+----3 niveles 
+Para tal de conseguir soluciones mas seguras y flexibles y escalables es necesario optimizar la utilización de los recursos.
+ Utiliza 2 servidores, un jefe y otros que hacen las tareas.
+    Servidores de aplicaciones
+    Servidores de bases de datos
+
+    CLIENTE - SERVIDOR DE NEGOCIACIÓN - SERVIDOR DE datos
+    La visra    Controlador             modelo:
+
+    Controlador: Programa que produce el contenido HTML i que optan con datos de manera dinamica
+    modelo - El que se encarga de trabajar con los datos
+Porque esta arquitectura?
+    A medida que crece internet es mas dificil de gestionar
+
+    VENTAJAS:
+    SEPARACION DE DATOS DE LA REPRESENTACION VISUAL
+    ESCALABILIDAD:
+    CONTROL DE ERRORES: No hace falta parar el sistema 
+
+--APLICACIONES WEB Y APLICACIONES DE ESCRITORIO--
+
+Las aplicaciones de escritorio son incompatibles con otros sistemas operativos, por lo tanto hay que hacer una especifica para cada uno
+    Son las que tradicionalmete tenemos instaladas en nuestros ordenadores
+
+Incompatibilidad de versiones: Estas difieren en sistemas operativos
+Dificultad de instalacion y actualizaciones:
+Precio elevado:
+Diferentes versiones entre sistemas operativos
+Portabilidad entre dispositivos
+
+Las aplicaciones WEB
+    Son aquellas a las que accedes a traves de un navegador
+
+    Ejemplos, wikipedia, correo electronico
+
+    No tendremos problemas de instalacion
+
+
+    Menor potencia: Tienen menos potencia para funcionar
+
+    Infrautilización del hardware: No utiliza todo el hardware del ordenador anfitrion
+
+    Connectividad rapida y constante: Para utilizar todaas las prestaciones de web es necesario un acceso rapido y fiable a internet
+
+----------INSTALACIÓN DE APACHE EN WINDOWS------------
+
+Para dotar a un ordenador la capacidad de mostrar paginas web 
+
+Los lenguajes de programacion permiten al usuario
+ventajas
+Permite construir nuevaas extraccciones
+permite crear un 
+
+Existen varios servidores web
+    Apache: En caso de optar por tecnologias php (Gratüito)
+    IIS(Internet information Server), si elegimos programar .net(microsoft).
+    Visual Basic
+    .Net
+    Python
+    C++
+
+Instalacion de servidores web
+    HTML es un lenguaje no extensible dedicado a las paeronas, XML esta orientado a maquinas y procesos
+        Ala union de estos dos se llama XHTML
+        Microsoft ofrece una serie de herramientas gratüito
+            Apache: Gratüito y multilplataforma modular y muy robusto pero con limitaciones de velocidad
+            Nginx: Servidor web gratüito multiplataforma con grandes prestacuines sobretodo para peticiones concurrente(muchas a la vez)
+            IIS: Servidro web propietario, orientado a windows, fundamentalmente dirigido a aplicaciones microsoft
+        DocumentRoot- Establece el directorio base donde irán almacenadas las paginas web
+        ServerName - nombre del servidor
+        Serverroot - Raiz de instalación de apache
+        Listen . Puerto de escucha
+        DirectoryIndex - nombre del archivo index del directorio
+        ErrorDocument - Muestra cuando encuentre un Error
+        eeeorLog. Ruta del archivo log
+        LogLevel - indica qué se almacenan los ficheros logs
+DIRECTIVAS
+Se engloban en 3 secciones:
+
+Sharepoint: Lanza web como objetivo de hacer proyectos colaborativos
+
+IIS Servidor WEB Windows
+
+Requisitos:
+    Maquina virtual fisica de windows 2019 o posterior instalado
+    Tener un usuario con privilegios de administrador
+
+Pasos:
+    Abrimos panel de Control
+    EN "PROGRAMAS" vamos a activar caracteristicas de windows 
+    En la lista de características buscar Information Services y aceptar
+    Las caracteristicas necesarias son:
+    ·Servidor web (ISS)
+    ·Alojamiento de aplicaciones
+    ·Servicios de archivos estáticos
+    instalar
+
+Crear web estática:
+    ·Abrimos el administrador IIS
+    ·En el panel de conexiones
+
+Los entornos de desarroollo se denominan IDE 
+
+---TENDENCIAS ACTUALES----
+El mundo cada vez esta mas interconectada
+Las aplicaciones web y los mobiles comparten una serie de características, 
+porque son usdos por los usuarios mediante el navedgador
+
+No es lo mismo desarrollar una aplicación y despues optimizarla para el movil,
+directamente dasarrollar una aplicacion sea instalada y distribuida a los dispositivos
+
+Diseño específico, aplicaciones nativas, específicas para un dispositivo en concreto
+
+Se desarrollan por distintas plataformas haciendo medianto un SDK, 
+
+Existen una serie de apps web con las tecnologias utilizadas como javascript, CSS y HTML admite la creacion de diferentes interfaces
+JavaScript lenguaje de parte del cliente, permite incorporar elementos de una pagina para dotarla de dinamismo
+Estas aplicaciones se conocen como aplicaciones web progresivas, 
