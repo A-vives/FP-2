@@ -1,0 +1,143 @@
+3 dominios
+    https://www.asix-presencial.eu accesible para todo el mundo
+    https://www.avives.eu accesible en todo el mundo menos el vaticano
+    http://www.aplicacio.eu accesible unicamente en la intranet
+
+Los 3 dominios simultaneamente por el mismo puerto
+
+
+contenido de carpeta del sitio https://www.asix-presencial.eu
+llamada pres.conf
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/C_presen.key -out /etc/ssl/certs/C_presen.crt
+
+
+<VirtualHost *:443>
+
+		#common name de clave publica
+ 		ServerName asix-presencial.eu
+        ServerAlias www.asix-presencial.eu
+        ServerAdmin ale@localhost
+        
+
+		#Donde empieza la página, el primer index.html
+        DocumentRoot /var/www/presencial
+
+		#encendemos el modulo de SSL
+        SSLEngine on
+        #clave pública
+        SSLCertificateFile /etc/ssl/certs/C_presen.crt
+        #clave privada
+        SSLCertificateKeyFile /etc/ssl/private/C_presen.key
+
+        #LogLevel info ssl:warn
+
+
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+
+
+contenido de carpeta del sitio https://www.avives.eu
+llamada avives.conf
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/C_avives.key -out /etc/ssl/certs/C_avives.crt
+
+
+<VirtualHost *:443>
+
+		#common name de clave publica
+ 		ServerName avives.eu
+        ServerAlias www.avives.eu
+        ServerAdmin ale@localhost
+        Redirect / /https://www.avives.eu
+
+		#Donde empieza la página, el primer index.html
+        DocumentRoot /var/www/avives
+
+		#encendemos el modulo de SSL
+        SSLEngine on
+        #clave pública
+        SSLCertificateFile /etc/ssl/certs/C_vives.crt
+        #clave privada
+        SSLCertificateKeyFile /etc/ssl/private/C_vives.key
+
+       
+    <Location />
+       <RequireAll>
+          Require all granted
+          Include /etc/apache2/blacklist
+       </RequireAll>
+    </Location>
+</VirtualHost>
+
+        #LogLevel info ssl:warn
+
+
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+RewriteEngine on
+RewriteMap    hosts-deny  "txt:/etc/apache2/blacklist"
+RewriteCond   "${hosts-deny:%{REMOTE_ADDR}|NOT-FOUND}" "!=NOT-FOUND" [OR]
+RewriteCond   "${hosts-deny:%{REMOTE_HOST}|NOT-FOUND}" "!=NOT-FOUND"
+RewriteRule .* - [F]
+</VirtualHost>
+
+
+contenido de carpeta del sitio https://www.aplicacion.eu
+llamada app.conf
+
+
+<VirtualHost *:80>
+
+		#common name de clave publica
+ 		ServerName aplicacio.com
+        ServerAlias www.aplicacio.com
+        ServerAdmin ale@localhost
+
+		#Donde empieza la página, el primer index.html
+        DocumentRoot /var/www/app
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+<Directory "/home/usuario/mis_fotos">
+Require all granted
+</Directory>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    192.168.196.121		avives.eu
+	192.168.196.121		asix-presencial.eu
+	192.168.196.121		aplicacio.eu
+    192.168.196.121		www.avives.eu
+	192.168.196.121		www.asix-presencial.eu
+	192.168.196.121		www.aplicacio.eu
+
+

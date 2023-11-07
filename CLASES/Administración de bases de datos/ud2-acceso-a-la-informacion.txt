@@ -82,3 +82,39 @@ ALTER ROLE <nombre_rol> WITH <opciones>
     
     SELECT * FROM pg_user;
 select  * from pg_user where password = md5("cadena");
+
+
+----------TEORIA----------
+
+Diccionarios de datos de una base de datos, se puede generar automáticamente
+Se usa para dar información de la estructura de la base de datos.
+Nos da las caracteristicas y los objetos, con esto se puede generar un informe 
+descriptivo y que da una cierta información, tiene una parte de documentación.
+Tehoricamente tu lo puedes crear pero una que esta creada con diferentes herramientas lo puedes generar
+Siempre se tiepe que añadir.
+
+Sobjetivo es dar precision sobre los datos que se manejan en la base de datos 
+Define con precisión los datos de entrada y de salida, flujos... etc
+
+Se usan por diferentes razones:
+    ·1 Manejar los detalles de empresas grandes
+    ·2 Comunicar un significado comun para todos los elementos del sistema
+    ·3 Documentar las caracteristicas del sistema
+    ·4 Facilita el analisis de los detalles con fiabilidad de evaluar las caracteristicas y ver donde efectuar cambios en el sistema
+    ·5 Localiza errores y omisiones en el sistema
+
+----SYNTAXYS----
+= -> Es definido como o esta hecho de 
++ -> AND 
+{} -> Cero o mas cosas dentro de las llaves, repeción, padre hijo, factura-detalle,factura
+n{}m    -> entre n y m , estos inclusive
+[||]    -> Entre un de los atriburos entre las barras
+    Sexo = [Femenino | Masculino | binario | neutro]
+()      -> Opcional lo que hay dentro
+" "      -> incluye literales, valor a utilizar
+* *      -> Incluye comentarios 
+
+Los nombres de cada item deben ser significativos y proporcionar informacion relevante
+
+iteracion
+elemento que tiene distintos elementos en su interior

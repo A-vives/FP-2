@@ -1,0 +1,164 @@
+APLICCAIONES DE LA NUBE
+    APLICACIONES OFIMÁTICAS WEB
+        SUITES OFIMÁTICAS
+            ONE DRIVE
+            DRIVE
+        INTEGRACIÓN DE APLICACIONES
+            Acceso directo a Aplicaciones
+
+
+Ajax -  Tecnologia de desarrollo web que permite optimizar las Operaciones
+Cloud computing
+Datacenter
+Edge Computing - Arquitectura distribúida 
+Flash - Permite crear elementos animados en la web
+MOOC - Cursos online masivos y abiertos
+SaaS, PaaS, IaaS(Software, plataform y estructure as a service) -
+SSB - Simula las funcionalidades del escritorio
+Streaming - Optimiza la descarga de archivos
+webOs - Servicios en la nube que ofrecen de forma remota, virtualización
+
+La vida quotidiana que utiliza aplicaciones informáticas que nos ayudan a optimizar las tareas más tediosas
+
+La ofimática ha mejorado mucho la eficiencia y la productividad
+Durante mucho tiempo se han usado unicamente aplicaciones de escritorio.
+    Mejor entorno gráfico
+    Mejor Velocidad i funcionabilidad
+Con la aparición de Ajax y Flash entre ellos, se ha ido incorporando aplicaciones web con prestaciones similares.
+
+Con la potenciación han aparecido toda serie de aplicaciones web que hacen trabajo en la nube(cloud computing)
+Todas las aplicaciones que puedan ser utilizadas desde internet, sin instalación, se pueden catalogar como aplicaciones de la nube.
+Las herramientas ofimáticas se caracterizan por:
+    posibilidad de realizar trabajo corporativo
+    Herramienta multi-plataforma
+    Integración de herramientas ofimática
+
+TIPOS DE APLICACIONES
+Cloud Computing, és la evolucion directa de la virtualización
+Mediante la virtualización de diferentes entornos a pertir de un sistema operativo
+        Emular windows en ubuntu
+El usuario no tiene porque saber qué infraestructura está usando
+Muy fácil crecimiento de la infraestructura del cliente, solo cambiando configuraciones.
+
+    NUBES-TIPOS Y APLICACIONES
+Un nuevo paradigma se define por las razónes económicas en lugar de limitaciones técnicas.
+                    1997. Professor Ramnath Chellappa.
+Año 2002- primera plataforma que te permite contratar recursos compartidos en red AWS(Amazon Web Service).
+Posteriormente, se incorpora Amazon EC2 (Amazon Elastic Compute Cloud). Capacidad de computación escalable.
+Después Amazon S3 (Amazon Simple Storage Service). Servicio de almacenamiento de datos.
+    Años mas tarde aparecieron Google Cloud Plataform, Microsoft Azure, Alibaba Cloud Computing.
+
+AWS ofrece diferentes tipos de tecnologia, tanto infraestructura, con tecnologias emergentes y aprendizaje automática e inteligencia artificial
+Se puede definir Cloud Computing es un servicio accesible en una serie de servicios gratuitos o no.
+El coste se ha de pagar, dependerá las herramientas que contratemos
+    Costes relativos al numero de usuarios, tipos de herramientas, espacios ocupados...
+
+Existen tecnologias Cloud Computing Open Source.
+    ▪OpenNebula
+    ▪Haddop
+        Este es un entorno mas utilizado paara el BigData.
+        Ofrecer servicios de respuesta sobre grandes cantidades de datos almacenadas a unas velocidades bastante altas y de forma bastante ágil.
+Entre la nube y el Big Data existe una relación muy estrecha ya que el Big Data no seria posible sin el entorno cloud.
+▪IoT, podria definirse como la interconnexió de dispositivos de toda casta por la red de internet.
+
+    Pago con la función de los recursos consumidos
+    Soluciones escalables en funcion a las necesidades
+    Herramienrtas autoservicio para el usuario
+    Facilidad tanto para disminuir como para aumentar recursos
+
+▪Tipos de nubes.
+    El (NIST) Define de forma de forma exhaustiva y completa el cloud computing
+▪SaaS -> (alquiler)Programas creados para ser accesibles de forma de prestación mediante http
+    Los usuarios utilizan estas tecnologias mediante un navegador, tanto tableta, PDA, movil.
+    El usuario utiliza diferentes herramientas suministradas por parte del proveedor, configurar el entorno y crear aplicaciones
+        Programa de facturacion en la nube.
+
+▪PaaS -> Servicios integrados dentro de una plataforma que permite desarrollar programas.
+        Alquilar sistemas operativos.
+▪IaaS -> Recursos informáticos virtualizados accesibles mediante la red, sin necesidad de tener instaladas las máquinas.
+        Ofrece un servicio más básicos, que gracias a la virtualización diferentes recursos y aplicaciones
+            Hay soluciones OpenSource como OpenStack, Eucalyptus, Nimbus.
+
+            ▪Nube Pública: Los centros de datos de proveedores de almacenamiento tanto los datos como los servicios que le dan a clientes, por tanto son responsables de su conexion y buen funcionamiento.
+                    OneDrive, Google Drive
+            ▪Nube Privada: Tanto los servicios como los datos estan en la infraestructura del cliente.
+                    El servidor que te montas en casa y solo la usas tu y tu organización.
+            ▪Nube Híbrida: Mezcla los dos modelos de nubes para conservar los datos en su infraestructura, el cliente tambien guarda parte de la información
+                Coge lo mejor de cada una de las 2.
+        ▪El uso de esta nube dependerá de los siguientes aspectos como:
+            La seguridad: Hay una serie de datos que no será posible llevarlos a la nube pública.
+            Edge Computing. Tenemos los datos y hestamos trabajando en la nube con ellos, se sincronizan esos datos.
+            Arquitectura distribuida que realiza los procesos cerca de la fuente de datos o la ubicación del usuario, para reducir tanto el proceso y la latencia.
+            Se intenta que la carga se distribuye entre las nubes públicas y privadas
+            Toma de decisiones y procesamiento mas eficaz y rápida.
+            disminucion de riesgos de ataques, confidenciales
+
+        Alquilar servidores.
+Actialmente además de las soluciones de correo electronico o de ofimática web,
+    existen unas soluciones llamadas: CRM - ERP.
+        ▪ERP - (Enterprise Resourse Planning): Sistema de Panificación de recursos empresariales.
+            Permite optimizar los procedimientos relacionados con logistica, inventario...
+        ▪CRM - (Customer Relationship Management): Permite centralizar toda la información de los clientes en una plataforma
+            Odoo, WorkDay...
+        
+        Otros Servicios: 
+            ▪WebEx: Aplicaciones de reuniones online,
+            ▪GuitHub: Permite el control de versiones de desarrollo del softwaremediante Git, que tambien rastrea cambios.
+            ▪Shopify Plus: Plataforma de comercio electrónico, se puede crear tienda online.
+            ▪SurveyMonkey: Plataforma para medir opiniones de los usuarios.
+            ▪Zoom Video: Herramienta de tipo comunicación como el chat, videollamadas, reuniones...
+    
+Aplicaciones de nube
+    Servicios de nube: 
+    Aplicaciones Ofimáticas: Word, Excel, PWpoint
+        -Posibilidades de forma simultánea documentos
+        -Almacenaje automático de los datos.
+        -No utiliza espacio de almacenamiento
+        -Posibilidad de publicar documentos por internet
+        -Documentos accesibles desde cualquier parte del mundo
+        Elevada integración con el correo electrónico
+        ▪Multiplataforma.
+        ▪Elevada compatibilidad con otras aplicaciones.
+        ▪Mucha compatibilidad entre aplicaciones
+        ▪Manuales de utilización.
+        ▪Perdurabilidad con el tiempo de los datos.
+        Control de la seguridad de los datos.
+                A. Processadors de textos.
+                B. Bases de dades.
+                C. Fulles de càlcul.
+                D. Gestors financers/comptables.
+                E. Presentacions
+                F. Àudio i vídeo
+                G. Clients de correu electrònic
+                H. Programes de tractament d'imatges i vídeos.
+                I. Agendes, Organitzadors Personals. 
+        Inconvenientes:
+        ▪Pérdida del control de los datos, no se almacenan dentro de  nuestro ordenador.
+        ▪Los aspectos de la seguridad y confidencialidad de los datos, depende de los directivas del proveedor.
+        ▪Funcionalidades limitadas de alunas herramientas.
+        ▪Dependencia de conexion a internet, tiene que ser rápida, segura y fiable.
+        ▪Prestaciones menos potentes que nos podrian dar una aplicacion de escritorio
+            Algunas aplicaciones:
+                ▪Microsoft Office 365.
+                ▪Office WebGoogle Workspace (G-Suite).
+                ▪Zoho Docs.
+
+RESUMEN
+▪El núvol i la virtualització fan que actualment moltes de les operacions que realitzem s'emmagatzemin en
+servidors en Internet.
+▪ Els serveis del núvol són escalables i permeten oferir als usuaris la possibilitat de pagar només pels recursos
+consumits.
+▪ El núvol ofereix diferents tipus de serveis i diferents models en funció tant de les prestacions com del seu àmbit
+d'aplicació.
+▪ Existeixen múltiples aplicacions en el núvol que permeten realitzar magatzematge d'arxius, compartir
+informació, realitzar control de versions o crear documents.
+▪ Les aplicacions d'ofimàtica web són molt utilitzades i ofereixen grans prestacions; no solament les típiques de
+processament, càlcul o presentacions, sinó que és possible afegir altres noves. Aquestes aplicacions ofereixen
+moltes aplicacions d'ofimàtica web les funcionalitats de la qual són cada vegada més similars a les d'escriptori.
+▪ Una característica comuna a totes les aplicacions web és la possibilitat de fer treball col·laboratius.
+▪ Existeix la possibilitat d'integrar les aplicacions web creant accessos directes que emmarquen els programes a
+través d'una finestra similar a la d'un programa d'escriptori.
+▪ A més d'existir aplicacions d'ofimàtica web, hi ha sistemes operatius web que ofereixen els anomenats
+escriptoris virtuals.
+▪ Les aplicacions *SSB permeten integrar les aplicacions web de forma centralitzada perquè es comportin com a
+programes d'escriptori.

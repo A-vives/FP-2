@@ -1,0 +1,38 @@
+Legislación sobre la preoteccion de datos
+    El respondable, el encargado del tratamiento y el delegado de proteccion de datos
+    Datos personales
+
+La LOPD creó los derechos llamados ARCO
+    -Accesso
+    -Rectificación
+    -Cancelación
+    -Oposición
+Derecho al olvido.
+Este reglamento está pensado para 
+
+OBJETIVO
+    Establecer normas relativas a la protección de las personas físicas
+    Protejer los derechos y las libertades fundamentales de las personas físicas y su derecho a la proteccion de los datos
+    Evitar restricciones a la libre circulación de los datos.
+
+Obligaciones de la empresa
+    Proporcionar procedimientos sencillos para ejercitar los derechos
+    Disponer de formularios conformes con RGPD Y LOPD
+
+    Tener un registro de las actividades
+    Poder demostrar delnte de la autoridad que se siggue la legalidad
+    Notificar las violaciones de seguridad
+        Hacer un informe donde ponga qué ha pasado, quien ha estado afectado... (auditoria pericial)
+    
+respondable: determina las finalidades y los medios del tratamiento
+
+encargado: Trata los datos personales de cuenta del responsabñe
+
+Delegado: Dirige todo
+
+Datos personales
+    Nombre, documentos con dni, huella dactilar, pasaporte, 
+
+INFRACCIONES Y SANCIONES
+    Si no se cumple esta ley la empresa puede llegar a ser sancionada
+    Normalmente al ser de caracter administrativo, són económicas

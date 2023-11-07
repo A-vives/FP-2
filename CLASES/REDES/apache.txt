@@ -1,6 +1,9 @@
 /var/log/apache2
 C:\Archivos de programa\Apache Software Foundation\Apache2.2\logs
 
+cambiar ip en targeta de Red
+    sudo ifconfig <interfaz> <nueva-ip> netmask <máscara de red>
+
 como funciona
     El cliente hace una peticion a la ip publica del router
         Hay que configurar las tablas DNS propias para engañar al equipo y poder hacerlo en locas
@@ -8,6 +11,8 @@ como funciona
 ---------------RUTAS
 windows ruta DNS
     system32\drivers\etc\hosts
+Ubintu ruta hosts
+    /etc/hosts
 
     RUTAS DE WEB
         /var/www/domini1/index.html
@@ -57,3 +62,54 @@ Require all granted
 </Directory>
 Ganamos acceso a la carpeta /home/usuario/mis_fotos
 
+ACTIVAR MODULO SSL 
+HABILITAR PUERTO 443 en ports.conf
+CREAR CLAVE PUBLICA/PRIVADA
+MODIFICAREMOS CONF DOMINIO
+REDIRECCIONAR PUERTO 80 -> 443
+
+sudo ufw allow "apache full" - activamos los puertos que gestiona apache 
+    sudo a2mod ssl - Activamos el modulo ssl de apache
+    creamos las claves publicas y privadas,
+
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/sxipres.key -out /etc/ssl/certs/sxipres.crt
+
+    usamos la arquitectura -x509
+    -node - le decimos que no queremos contraseña, cada vez que cifre y descifre hay que poner contraseña
+    -days 365 - expiracion de estas claves privadas
+    -new key - por defecto nos genera solo la clave publica, con esto le decimos que tambien queremos la 
+            privadas en este caso sera standar rsa:2048
+    -keyout /etc/ssl/private/sxipres.key - Especificamos donde va la clave privada, TIENEN QUE ESTAR EN /etc/ssl/ PARA QUE FUNCIONEN LAS CLAVES.
+    -out /etc/ssl/certs/sxipres.crt - Donde guardaremos el certificado
+
+Common name: dominio donde se usará la clave - avives-asix.com
+
+Para tener un sitio seguro tenemos que hacer una copia de seguridad del archivo /etc/apache2/sites-available/000-default.conf
+    Aqui tendremos que poner lo siguiente:
+
+    SSL-SITE.conf
+        <VirtualHost *:443>     
+        ServerName avives-asix.com ---- common name de clave publica
+        ServerAlias www.avives-asix.com
+
+        ServerAdmin ale@ale-VirtualBox
+        DocumentRoot /var/www/MTS ---- Donde empieza la página, el primer index.html 
+
+        SSLEngine on ---- encendemos el modulo de SSL
+        SSLCertificateFile /etc/ssl/certs/public_key_01.crt <clave pública>
+        SSLCertificateKeyFile /etc/ssl/private/private_key_01.key <clave privada>
+
+        HAY QUE DIRECCIONAR EL PUERTO 80 AL 443
+        <VirtualHost *:80>
+            ServerName avives-asix.com
+            ServerAlias www.avives-asix.com
+            Redirect / /https://www.avives-asix.com
+        
+                    CONTENIDO DE CONJUNTO DE CLAVES
+                CountryName: ES
+                State or Province: Spain
+                LocalyName: Palma
+                OrganizationName: BorjaMoll
+                OrganizationalUnitName: ASIX
+                CommonName: avives-asix.com
+                e-mail: alejandro.vives31@gmail.com 
