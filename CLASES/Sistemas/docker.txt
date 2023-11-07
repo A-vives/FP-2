@@ -76,7 +76,13 @@ crear escritorio, virtual/fisica- carpeta - "produccion"
 DOCKERFILE - Será único en el proyecto
 DOCKER BUILD . en la carpeda donde estan los archivos - nos va a montar una imagen con todos los pasos que hemos hecho para construir esa imagen
 DOCKER TAG <ID_imagen> - Ponerle una etiqueta a la imagen
+DOCKER INSPECT 
 
 cifpfbmollaso/image:Apellido
 cifpfbmollaso/ ale/unatended:vives
 asoimatgescurs202122
+
+-------07/11------
+#La carpeta /home/ale/prueba será la que dará el servicio de /var/www/html
+sudo docker run -dt -v /home/ale/prueba:/var/www/html -p 9091:80 vivesapache2.0
+

@@ -1,0 +1,53 @@
+Servidor: Aplicacion que escucha peticiones por un puerto determinado
+Servidor de aplicaciones: Ordenador que ejecuta aplicaciones por peticiones externas
+
+Servidor Tomcat esta desarrollado por los mismos que Apache
+
+Servidor aplicaciones Tomcat
+    JAVA
+    PHP
+    PYTHON
+    JS
+
+Maquina Virtual JAVA: Traduce las operaciones de java a las que entiende el sistema operativo
+
+peticiones syncronas: cuando el cliente hace una peticion a un proceso clave se queda esperando
+peticiones asyncrona: son objetos que javascript pregunta sin que te des cuenta.
+
+----------Instalación TOMCAT----------
+
+sudo apt update && sudo apt upgrade -y 
+
+#instalacion del kit de desarrollo JKD
+sudo apt install openjdk-11-jdk -y
+
+#creamos usuario para tomcat
+sudo useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat 
+
+#Descargamos el programa en la carpeta /tmp (fijarse bien en la versión)
+sudo wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.15/bin/apache-tomcat-10.1.15.tar.gz 
+
+#Extraemos el contenido en la carpeta /opt/tomcat
+sudo tar xzf apache-tomcat-*.tar.gz -C /opt/tomcat 
+
+#Damos permisos necesarios:
+sudo chown -R tomcat: /opt/tomcat 
+sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh' 
+
+#modificamos el archivo con el siguiente contenido:
+
+sudo nano /opt/tomcat/conf/tomcat-users.xml 
+
+<!-- user manager can access only the manager section -->
+<role rolename="manager-gui" />
+<user username="manager" password="_SECRET_PASSWORD_" roles="manager-gui" />
+ 
+<!-- user admin can access manager and admin section both -->
+<role rolename="admin-gui" />
+<user username="admin" password="_SECRET_PASSWORD_" roles="manager-gui,admin-gui" />
+
+#Añadiremos acceso remoto a los hosts de tomcat
+sudo nano /opt/tomcat/apache-tomcat-10.1.15/webapps/manager/META-INF/context.xml
+ #En este archivo tenemos que comentar la etiqueta <Valve>
+
+
