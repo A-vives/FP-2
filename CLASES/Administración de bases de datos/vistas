@@ -1,0 +1,30 @@
+listar vistas \dv
+
+modificacion de vistas
+OWNER TO El propietario es el que tiene orivileguis
+
+
+ALTER VIEW nom_lista RENAME TO nou_nom
+
+ALTER VIEW nom_vista SET SCHEMA nuevo_esquema
+
+----------ELIMINACION DE vistas---------------
+
+DROP VIEW nombre_lista [CASCADE | RESTRICT]
+    CASCADE: Elimina todas las dependencias de esa listar
+    RESTRICT: No se borra la vista si algo depende de ella.
+
+CREATE VIEW clientes_lineas as
+SELECT
+from
+WHERE
+
+para ver la vista
+SELECT * FROM clientes_lineas;
+
+----------CREAR REGLAS-----
+Regla incondicional - no se hace cuando se cumple la condicion.
+CREATE RULE ins_client_linia_nothing AS
+ON INSERT TO clientes_lineas
+DO INSTEAD NOTHING;
+

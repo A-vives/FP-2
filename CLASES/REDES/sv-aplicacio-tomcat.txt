@@ -51,3 +51,13 @@ sudo nano /opt/tomcat/apache-tomcat-10.1.15/webapps/manager/META-INF/context.xml
  #En este archivo tenemos que comentar la etiqueta <Valve>
 
 
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/C_sm1.key -out /etc/ssl/certs/C_sm1.crt
+
+                CountryName: ES
+                State or Province: Spain
+                LocalyName: Palma
+                OrganizationName: SM Solutions
+                OrganizationalUnitName: IT
+                CommonName: sm-solutions.eu
+                e-mail: alejandro.vives31@gmail.com 
+                

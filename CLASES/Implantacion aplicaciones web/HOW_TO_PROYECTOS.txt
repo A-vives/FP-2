@@ -1,0 +1,18 @@
+SCRUN
+1. Reunion inicial
+    20/11
+    lugar
+2. Inicio Analisis
+    21/11
+    Se empieza a programar
+3. programación
+    22/11
+
+4. Betatesting
+    23/11
+5. Ambito de producción
+
+1. reunion INICIALL
+2. Diseño del sistema
+    OK. COMPAÑIA
+3. Implantar en Beta

@@ -12,6 +12,9 @@ sudo docker run -it ubuntu /bin/bash - ejecutar container ubuntu con shell /bin/
                 -p 9090<local>:80<puerto_container> <nombre_imagen/id_imagen>
                 -v <rutalocal>:<rutadest> <id_imagen> vuncula en el destino la carpeta local
                     sudo docker run -p 9191:80 -v /home/ale/Desktop/produccion:/var/www/html/ -dt vivesapache2.0
+#La carpeta /home/ale/prueba será la que dará el servicio de /var/www/html
+sudo docker run -dt -v /home/ale/prueba:/var/www/html -p 9091:80 vivesapache2.0
+
 ----GUARDAR----
 sudo docker commit <id_container> <id_cont_guardado>
 ----EXEC----
@@ -83,6 +86,4 @@ cifpfbmollaso/ ale/unatended:vives
 asoimatgescurs202122
 
 -------07/11------
-#La carpeta /home/ale/prueba será la que dará el servicio de /var/www/html
-sudo docker run -dt -v /home/ale/prueba:/var/www/html -p 9091:80 vivesapache2.0
 

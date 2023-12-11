@@ -1,0 +1,29 @@
+aguila 1 = opio - Carlos Castaño
+aguila 2 = Yasir Rahman 
+aguila 3 = Goodman
+
+aguila 4 = Pancho
+aguila 5 = Tomas
+aguila 6 =
+
+OBJETIVOS T
+T1 - POLICIA
+T2 - CIVIL
+T3 - MAFIA
+T4 - VIP
+
+SITUACIONAL S
+S1 - ROBO
+S2 - SECUESTRO
+S3 - CONTROL
+S4 - HERIDO/CAIDO
+S5 - MUERTO
+S6 - PERSECUCION
+
+ACIONES
+1 - EMBOSCADA
+2 - APOYO
+3 - EXTRACCION
+4 - CARGAMENTO
+5 - CAMBIAZO
+6 - COMBOY

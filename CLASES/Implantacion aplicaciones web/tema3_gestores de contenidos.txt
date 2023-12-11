@@ -1,0 +1,80 @@
+GESTORES DE CONTENIDOS - CMS - cONTENT Managament Software
+
+objetivos:
+Aprender qué és un gestor de archivos
+Conocer ventajas de utilizar un gestor de CONTENIDOS
+Clasificar los gestores de contenidos en funcion de los diferentes criterios
+Conocer los diferentes tipos de licencias de software
+Aprende quals son los criterios de elección para elegir un gestpr de contenidos o Otros
+identificar los diferentes tipos de gestor de contenidos
+
+Back-end: Solo lo pueden ver los administradores que se usa  para administrar el servidor 
+CMS- Content Managament system.
+ERP - Enterprise Resource Planning
+FreeWare - Licencia que permite utilizar un programa sin costes pero no deja modificar el programa
+Front-end - Parte del usuario de un sistema de gestion de contenidos
+Wikis - Páginas web creadas a partir de colaboración masiva de los usuarios
+Gadget - Manipulacion del software dotandolo de más posibilidades / medidor de ram.
+Gpl - Licencia pública general referida a la utilicación del software libre
+LMS - 
+OEM - 
+Shareware - Licencias que permiten usar un Software sin poder modificarlo con un limite de tiempo
+Widget- 
+
+Gestores de contenidos 
+Wordpres - Joomla - Drupal
+
+Software propietario
+Software libre - Este permite a millones de programadores aplicar y ampliar el crecimiento.
+
+    Copyleft - Tiene restricciones que son de obligatorio cumplimiento
+
+    GPL - Libre y de codigo abierto, no tiene porque ser gratuito , se puede altrar, copiar y distribuir de forma gratuita
+    Debian - Exige que todo el software distribuido sea libre y vaya acompañado del codigo fuente
+    BSD - Permite comercializar el software de forma libre, sin obligación de compartir el codigo fuente.
+    MPL - Nos permite modificar, pero hay que mandarle una copia de las modificaciones perdiondo los derechos de dicha modificaciones
+otros tipos de licencias
+    Shareware - Utilizacion limitada en tiempo del software : periodo de prueba.
+    Freeware - NO se puede modificar el codigo pero si usarlo de forma gratüita si utilizarlo de forma gratüita
+    Privates - Codigo cerrado, nunca es gratis, no puede ser alterado ni copiado, software pre-instalado
+
+Gestores de contenido de propósito general
+Wordpress - CMS versátil 
+   Joomla  Britrix   Drupal    Typo3   neos
+
+Typo3 y neos - Multiplataforma y codigo abierto
+                Dedicados al mundo empresariales
+                Lenguaje propio: TypoScript
+        neos - Posibilita integrarse en otros sistemas externos ERP
+Craft - CRS que esta implementando poco a poco, con su propio mercado de complementos y un motor de plantillas PHP llamado Twing
+Bolt - CMS Es mucho más rápido pero no sirve para almacenar información.
+
+SQLite - Sistema más usado en bases de datos
+        Pequeño, rápido, autónomo, de alta Fiabilidad
+        integrado en todos los telefonos y en la mayoria de ordenadores
+
+Blog - Diario de navegación poe la web que se realiza de forma cronológica de notícias.
+Wix - CMS permite crear blogs profesionales o una página web
+Blogger - Destaca por su sencillez y su integración con herramientas de google.
+            Otras opciones són: Site123, Weebly o Wordpress
+
+Gestor e-comerce- tiendas online - la más grande és Amazon.
+
+    SaaS, 
+    -
+La primera venta online fué sting 
+Gestores learning- Gestores para educación, como moodle, classroom, chamilo, Dockeos o Canvas.
+Los sistemas de aprendizaje en linea òfrecen la 
+Foros- Permiten a los usuarios compartir opiniones de diferentes temas. 
+
+Cual elegir? 
+    Según
+    Notoriedad
+    costeMigración
+    Posibilidad de personalización
+    necesidades
+    Buenas actualizaciones
+    Documentación
+    seguridad
+    Herramientas de inteligencia artificial.
+    

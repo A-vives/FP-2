@@ -113,3 +113,22 @@ Para tener un sitio seguro tenemos que hacer una copia de seguridad del archivo 
                 OrganizationalUnitName: ASIX
                 CommonName: avives-asix.com
                 e-mail: alejandro.vives31@gmail.com 
+
+
+<VirtualHost *:443>     
+        ServerName sm-solutions.eu ---- common name de clave publica
+        ServerAlias www.sm-solutions.eu
+
+        ServerAdmin ale@ale-VirtualBox
+        DocumentRoot /var/www/html/smsol ---- Donde empieza la página, el primer index.html 
+
+        SSLEngine on ---- encendemos el modulo de SSL
+        SSLCertificateFile /etc/ssl/certs/public_key_01.crt <clave pública>
+        SSLCertificateKeyFile /etc/ssl/private/private_key_01.key <clave privada>
+
+        HAY QUE DIRECCIONAR EL PUERTO 80 AL 443
+        <VirtualHost *:80>
+            ServerName avives-asix.com
+            ServerAlias www.avives-asix.com
+            Redirect / /https://www.avives-asix.com
+        

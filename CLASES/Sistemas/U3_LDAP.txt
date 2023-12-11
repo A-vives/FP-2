@@ -1,0 +1,19 @@
+Servicio de directorio (SD) 
+LDAP protocoloa a nivel interno de los servicios de directorio
+    Micrfosoft (AD) y linux (LDAP)
+
+FQDN- identifica cualquier equipo en la red = pc1.cifpborjamoll
+
+Unidades organizartivas, nos permiten una mejor administracion de los objetos
+
+Ejecuta las funciones de autenticación
+Puede haber mas de uno y todos tendrán una copia de la BD
+Es una replica de todos los objetos y esquema del dominio
+
+CREAR PERFIR MOBIL
+
+net share - ver recursos compartidos en el equipo
+
+Permisos
+crear carpeta compartida en el servidor
+    Añadir el usuario a la carpeta para que tenga acceso
