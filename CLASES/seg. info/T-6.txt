@@ -1,0 +1,74 @@
+Ataque - proceso dirigido con una intención bien definida
+    conseguir efectos sobre un objetivo
+Al tratarse de una secuencia de fases, una mitigación en cualquiera de ellas romperá la cadena y frustrará el Ataque
+Cada ataque deja unas huellas de las que se puede aprender y utilizar para comprender a los adversarios y estudiar xosus acciones
+    Esto nos ayuda a hacer defensas contra esos tipos de ataques.
+
+Reconocimiento - Recopilar información
+Preparacion - Se prepara el ataque de forma específica
+Distribución - Se produce la transmisión del ataque
+Explotación - Implica la detonación del ataque comprometiendo el equipo infectado
+Instalación - Fase en la cual el atacante instala el malware en la victima
+Comando y control - Llegados a este punto el atacante cuenta con el control del sistema de la victima
+Acciones contra objetivos - Esta fase final, el atacante se hace con los datos y se intenta expandir hacia más objetivos.
+
+
+Amenazas en comunicaciones:
+Interrupción: pierden datos en la comunicación
+    Denegación inmediata
+    Se ganantiza: Integridad, Confidencialidad
+    No se garantiza: Disponibilidad; puede que la recepción no sea correcta
+        Ej: Fallos en el sistema operativo, borado de programas o datos, DDos
+
+Inteceptación: elemento de un acceso no determinado
+    Detección difíl, no deja huellas.
+    Se garantiza: Integridad, Disponibilidad
+    No se garantiza Confidencialidad; es posible que alguien no autorizado acceda a la información
+        Ej: Sniffing
+
+Modificación: acceso que consigue modificar el objetivo incluso la destrucción
+    Detección dificil, según circunstancias
+    Se garantiza: Disponibilidad
+    No se garantiza Integridad: Los datos enviados pueden ser modificados en el camino
+    Confidencialidad: alguien no atourizado puede acceder a la información 
+        Ej: Modificación de base de datos
+            MitM (Pharming) Man in the middle
+
+Fabricación: Modificación destinada a conseguir un objeto similar al atacado de forma 
+    Detección dificil. Deltos de falsificación
+    Se garantiza: Integridad, Confidencialidad, Disponibilidad
+        Ej: Añadir registros en la base de datos, Spoofing (ARP, IP)
+
+
+Flujo de la informacion se garantiza
+Confidencialidad
+Integridad
+Disponibilidad
+
+Para protegerse: 
+·Diseño de redireccionamoiento, parcelización y servicios de subredes dentro de nuestra red
+    Subneting, VLAN, DMZ (Zona desmilitarizada) 
+·Politicas de adminiatración de direccionamiento estático para servidores.
+·Monitorización del tráfico de red y de las asignaciones de direccionamiento dinámico y de sus tablas ARP
+·Modificación de configuraciones de seguridad, contraseñas por defecto
+·En redes inalámbridas emplear maximo nivel de seguridad.
+
+Vulnerabilidad, Debilidad o un error de diseño o implementacion que pueda provocar en un evento que 
+comprometa la seguridad de un dispositivo, siste,a operativo, red, programa o de un protocolo
+
+NESSUSS OPENBAS
+Blue team - Equipo defensivo
+Red team - Equipo ofensivo
+Purple team - Coordina el aprendizage entre red y blue team
+
+Sistemas de Detección de intrusos (IDS)
+    Herramientas de seguridad que detectan y monitorizan los eventos ocurridos en un determinado sistema
+    en busqueda de intentos de comprender la seguridad de dicho sistema.
+    Buscar patrones previamente definidos que impliquen una actividad sospechosa 
+
+SNORT - SURICATA (IPS - IPS) Software que nos detecta y actua contra los atacantes
+    Esta formado por:
+        Fuente de recogida de datos: log, ids host
+        reglas y filtros sobre los datos u parones para detectar anomalias
+
+HTTPS - TLS - Se cambío, ssl obsoleto

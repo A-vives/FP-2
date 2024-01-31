@@ -1,0 +1,19 @@
+En las transacciones si algo falla se va a dehacer todo lo que se ha hecho en la trancaccion.
+Si no falla se va a hacer un COMMIT, y si falla halgo se hará un Rollback
+unidad e treball
+
+gestion de transaccciones
+    START - iniciamos transaccion
+    BEGIN - 
+    Savepoint - punto en el que es seguro, si falla a partir de aqui vuelve a este punto.
+    COMMIT - Cuando se llega al final de la transaccion si no ha habido ningun fallo
+    ROLLBACK - 
+
+Acceso multiusuario a los datos.
+
+Dentro de la transaccion puede haber varios niveles
+ En cualquier momento se puede hacer el savepoint
+Por defecto se usa a nivel de aislamiento READ COMMITTED
+    Esto no se puede cambiar 
+
+END - Si llega aqui y no se ha cometido ningun error se realizará el COMMIT

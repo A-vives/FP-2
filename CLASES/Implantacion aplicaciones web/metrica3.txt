@@ -1,0 +1,32 @@
+PLANIFICACION
+    nube privada para gestion interna de mi empresa
+ESTUDIO ¿QUE NECESITA?
+    SERVICIOS DE CORREO ELECTRONICOS
+        SHAREPOINT
+    web
+        apache
+    DOMINIO
+
+ANALISIS
+Desarrollamos el producto
+
+    Presupuesto
+        coste 
+        PVP
+
+DISEÑO
+    ESQUEMAS
+     VISIO      Proyect     
+     I.Sistemas - 30 puntos - jornadas laborales x 720€
+
+CONSTRUCCION Estos modifican el proyecto adaptandolo a la realidad
+    procedimientos de construccion y personal
+    
+MANTENIMIENTO
+    Proyect - cms para organizar el mantenimiento (SCRUM)
+    mantenimniento preventivo tienes un scrum con 40 cosas
+        hacer actividades de mantenimientos
+        Comprobacion de la integridad de la memoria RAM 
+
+        VER EL ESTADO DEL CORTAFUEGOS, SI TENEMOS ATAQUES...
+    

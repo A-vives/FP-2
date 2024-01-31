@@ -1,0 +1,11 @@
+declarar zona de dns 
+    en el archivo named.conf.local
+        zone "avives.eu" [
+            type master;
+            "file /etc/dns/zone/forward.avives.eu";  archivo de tabla dns, En este archivo declaramos los pcs que hay en la zona
+            allow-update [none;] no se actualiza automáticamente
+        ]
+
+tendremos que crear la carpeta y el path de /etc/dns/zone/forward.avives.eu
+poniendo en ese archivo las ip de los pcs que se encuentran en la zona de resolución de dns
+

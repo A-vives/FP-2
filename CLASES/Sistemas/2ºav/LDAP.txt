@@ -1,0 +1,23 @@
+LDAP : Protocolo ligero para implementar un dominio
+OPENLDAP : Software de ubuntu que trabaja con este protocolo
+
+comandos;
+    DSQUERY /? - consulta
+    DSQUERY OU - organizadores unidad
+            USER - usuarios del active directory
+
+DN - Domain name
+CN - Comon name
+
+puerto 389
+
+ldapsearch -x -LLL -b dc=[usuario],dc=net Le hacemos una consulta al directorio, es una forma de comprobar de que todo se ha instalado correctamente y que tenemos un esquema vacio
+    -x auth simple no SASL
+    -LLL Desactiva la info de la version
+    -b Dominio de busqueda.
+
+Ficheros .ldif incluye una estructura de datos que representa a uno o mas objetos del active directory
+
+ldapadd x -D c=admin,
+
+jxplorer - software con entorno grafico para gestionar ldap

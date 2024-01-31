@@ -1,0 +1,24 @@
+3 maquinas virtuales
+    servidor DNS Bind9
+    Crear un dominio: avives.eu
+            Sv.DNS  --> dns.avives.eu    IP
+            Sv. DHCP -> dhcp.avives.eu   IP
+            Cliente --> client.avives.eu IP
+        CACHE --> GOOGLE
+        adaptador de red interna
+            IP Estatica atraves de DHCP IP Dinámica
+                Que le de siempre la misma ip
+        adaptador nat
+DNS  UPDATE - DHCP -
+    Servidor DHCP ISC
+        adaptador de red interna
+            IP Statica 
+            Asignar ip Statica DNS
+            Rango dinámico, hay que quitar la del DNS y la fija del DHCP
+            Nos hace un servidor de DNS - indicará qué servidor de DNS tiene que usar (Bind9)
+
+        adaptador nat
+
+    CLIENTE
+        adaptador de red interna
+        adaptador nat

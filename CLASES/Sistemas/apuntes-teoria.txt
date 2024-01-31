@@ -1,0 +1,5 @@
+nivel funcional es la version de windows, de mayor a menor es incompatible
+
+5 ruta por defecto que proporciona un rol para determinar el destino de la base de datos del rol instalado
+                                                                            archivos del rol y Logs
+

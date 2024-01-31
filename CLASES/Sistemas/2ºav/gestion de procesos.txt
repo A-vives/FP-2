@@ -1,0 +1,68 @@
+Procesos residentes:  Son los procesos que estan en la memoria mientras se ejecutan
+intercambiavles: Pueden estar en la memoria principal mientras esten bloqueados
+    Pesados: Procesos pesados son independientes y tienen sus propios recursos
+    Lijeros: Tambien llamados hilos de ejecución o therads, comparten entre si la memoria y recursos de entrada y salida.
+
+subproceso parte de la memoria
+
+    Ejecucion de multiples prodesos optimizando el uso de la cpu
+
+Multiprogramación: Maximizar el uso de la cpu teniendo siempre un proceso en ejecución
+Tiempo compartido: entendiendo que una cpu solo puede realizar un proceso a la hora,
+                    esto se basa en intercalar el tiempo de ejecución de cpu entre varios procesos
+
+
+Algoritmos no apropiativos
+
+FIFO: First In Firs Out; El primero que entra el primero que sale
+LIFO: Last Input First Output; El ultimo que entra es el primero.
+FCFS: First Come First Servred; Es como una FIFO, da prioridad al primero que Llegados
+SJF: Shortest Job First; Primero se miden en rafagas de cpu para completar la tarea y prioriza los procesos mas cortos.
+
+Algoritmos apropiativos
+
+Round Robin: Establece un tiempo determinado a cada proceso, este tiempo llamado quantum (numero de ciclos de ejecución que se asigna a un proceso), puede ser constante o calcularse dinamicamente
+        el proceso abandola la CPU ciando se termina su quantum, los quantums pequeños pueden producir cambios en el contexto de un proceso (encendido-apagado-bloqueado).
+SRT: Shortest Remaining Time; Dependiente del tiempo de rafaga, pero en este caso es apropiativo, eso quiere decir que si llega un nuevo proceso con menos tiempo de ejecución se apropia de la CPU y lo expulsa.
+
+Bloque de control de procesos:
+
+Identificados; Unico irrepetible;
+Estado: Estado actual (Preparado, Bloqueado, en ejecución, etc.)
+Contador del rograma(posicion en memoria de la siguiente instruccion): Incluye la dirección de la siguiente instrucción del proceso
+Registros de la CPU: Acumuladores, Punteros de pila (stack), registros generales.
+Informacion de planificación: Como la prioridad del proceso y el valor del hardware.
+Información de la gestion de memoria: definicion de la ventana de memora y con el registro dbase, limitem tabla de paginas o segmentos
+Informacion de comparibilidad: Tiempo de cpu, tiempo consumido
+Informacion de estado de las entradas/salidas: dispositivos de e/s asignados al procesos, lista de archivos abiertos, etc,
+Puntero de memoria; apunta al nodo siguiente de la lista enlacada de PCB.
+
+En todos los cambios de contexto se actualiza esta informacion
+  
+   el cargador:  Modulo del sistema operativo que crea un proceso
+    El planificador: Elige en base al algoritmo elige el proceso a llevar a cambios
+
+Estados de un proceso:
+
+    Nuevo: El proceso se esta creando
+
+    Preparado: El proceso esta en la cola preparado para la asignacion de un procesador.
+
+    En ejecución: Las instrucciones del proceso se estan siendo ejecutadas por el procesador
+
+    Bloqueado: No puede estar sin pasar por ejecucion, el proceso esta parado en espera de un evento de desbloqueo
+
+    Finalizado: Unicamente cuando ha transcurrido/ejecutado todos los ciclos necesarios para llevarse a cabo.
+            Se libera espacio tanto en memoria como en CPU para nuevos procesos que se puedan ejecutar
+    
+    Bloques de procesos que están bloqueados a la espera de una cpu libre para ser ejecutados.
+
+Threads: 
+
+    Recursos de un proceso: Aun proceso de le asigna siempre un espacio de memoria y a veces tambien de otros recursos de e-s
+    Assignacion de CPU: 
+
+Interrupciones: presencia de un evento que obliga al sistema operativo a coger el control de la CPU  para analizar i tratar la situacion mediante rutinas específicas.
+
+--- ARCHIVOS DE PAGINACION
+

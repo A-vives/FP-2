@@ -1,0 +1,41 @@
+Software o hardware que bloquea trafico de la Red
+
+que acciones se pueden dar en las reglas    
+    Dejar pasar - Pass 
+    bloquear    - block
+    Rechazar    - reject
+
+Si se bloquea se ignora el paquete
+Si se rechaza el cliente recibe un mensage que no quiere la conexion
+
+Proxy web: puede que sea uno de los proxis mas habituales basado en http y HTTPS
+    Objetivo: hacer de intermediario y tener control de lo que está pasando.
+Proxy cache: 
+
+Proxy inverso: Llegan al proxy desde fuera, redirigen al apache y hace de intermediario para redirigir la conexion hacia tomcat multiplexamos las conexiones
+    Haremos un balanceo de carga.
+
+interfaz WAN em0
+        lan_em em1
+        lan_DMZ em2
+
+lo ultimo será configurar el cortafuegos desde una maquina cliente.
+
+cuando añadimos una regla:
+    añade la regla en el top y otro boton la añade abajo
+
+no tienen acceso ambas redes para que sea mas seguro
+
+
+no deberian tener acceso los equipos de la dmz, hay que hacer una reegla para que tenga conexion a internet
+
+firewall - nat, añadir regla nat para redirigir el trafico
+    "portfordwading" cuando la añadamos afectará en la red WAN
+
+regla: cuando llegue trafico web, lo redirigimos a la ip FIJA de la maquina con apache
+
+BLOQUEAR TRAFICO 80
+regla nat 443 - redirigir tráfico
+servicio ssh: 
+
+crear regla que bloquee el tráfico.
